@@ -29,14 +29,5 @@ hugo version  在Windows上
   点击 setting，找到GitHub Pages，然后点击链接就可以看到blog的内容了</description>
     </item>
     
-    <item>
-      <title>开篇大吉</title>
-      <link>https://gy-coder.xyz/posts/%E5%BC%80%E7%AF%87%E5%A4%A7%E5%90%89/</link>
-      <pubDate>Sun, 10 Nov 2019 10:59:37 +0800</pubDate>
-      
-      <guid>https://gy-coder.xyz/posts/%E5%BC%80%E7%AF%87%E5%A4%A7%E5%90%89/</guid>
-      <description>开业大吉 希望能写出来好文章</description>
-    </item>
-    
   </channel>
 </rss>
