@@ -6,10 +6,23 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Sun, 10 Nov 2019 16:59:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 20:40:01 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git命令入门</title>
+      <link>https://gy-coder.xyz/posts/git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 12 Nov 2019 20:40:01 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</guid>
+      <description>命令是计算机编程学习者所具备的基本功之一，下面我们就来简单的讨论一下命令以及所需要的知识点
+命令所需要的英语词汇:
+为了加深对命令内容的理解，我们简单的介绍一些涉及命令的基本词汇。
+ file &amp;ndash;&amp;gt; 文件 remove &amp;ndash;&amp;gt; 删除 recursive &amp;ndash;&amp;gt; 递归的 make &amp;ndash;&amp;gt; 制作 copy &amp;ndash;&amp;gt; 拷贝 link &amp;ndash;&amp;gt; 链接 move &amp;ndash;&amp;gt; 移动 list &amp;ndash;&amp;gt; 列表 echo &amp;ndash;&amp;gt; 回声 touch &amp;ndash;&amp;gt; 触摸 change &amp;ndash;&amp;gt; 改变 directory &amp;ndash;&amp;gt; 目录 force &amp;ndash;&amp;gt; 强制  命令的缩写:
+ file &amp;ndash; 无 remove &amp;ndash; rm recursive &amp;ndash; 无 make &amp;ndash; mk copy &amp;ndash; cp link &amp;ndash;ls move &amp;ndash; mv list &amp;ndash; ls echo &amp;ndash; echo touch &amp;ndash; touch change &amp;ndash; cd 中的 c directory &amp;ndash; cd 中的 d force &amp;ndash; f  操作文件的命令:</description>
+    </item>
     
     <item>
       <title>如何用hugo搭建个人博客</title>
