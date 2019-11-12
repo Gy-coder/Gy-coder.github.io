@@ -45,7 +45,7 @@
 
 <meta itemprop="datePublished" content="2019-11-12T20:40:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-12T20:40:01&#43;08:00" />
-<meta itemprop="wordCount" content="183">
+<meta itemprop="wordCount" content="195">
 
 
 
@@ -168,7 +168,7 @@
 </code></pre></li>
 </ul>
 
-<p><img src="/images/Git&amp;#32;command/1.png" alt="" /></p>
+<p><img src="/images/2.png" alt="" /></p>
 
 <ul>
 <li><p>查看当前目录的内容:</p>
@@ -203,24 +203,21 @@
 <p>几种查找的区别:</p>
 
 <ul>
-<li>cat显示文件内的全部内容</li>
-<li>head只会查看文件的前10行</li>
-<li>tail只查看文件的后10行</li>
-<li>less显示的内容是可以滚动的</li>
+<li>cat 显示文件内的全部内容</li>
+<li>head 只会查看文件的前 10 行</li>
+<li>tail 只查看文件的后 10 行</li>
+<li>less 显示的内容是可以滚动的</li>
 </ul>
 
 <ol>
-<li><p>文件的增加:</p>
+<li><p>文件的增加:</p></li>
 
-<ol>
-<li>创建文件:
-<br /></li>
-</ol>
+<li><p>创建文件:</p>
 
 <ul>
 <li><p>单个文件的创建:</p>
 
-<pre><code>   $ touch 文件名(要写扩展名) 
+<pre><code>   $ touch 文件名(要写扩展名)
 </code></pre></li>
 </ul>
 
@@ -245,7 +242,7 @@
 </code></pre></li>
 </ul>
 
-<p><img src="/images/Git&amp;#32;command/7.png" alt="" /><br />
+<p><img src="/images/Git&amp;#32;command/7.png" alt="" />
 <img src="/images/Git&amp;#32;command/8.png" alt="" /></p>
 
 <ul>
@@ -259,28 +256,26 @@
 <img src="/images/Git&amp;#32;command/10.png" alt="" />
 <img src="/images/Git&amp;#32;command/11.png" alt="" /></p></li>
 
-<li><p>文件(目录)的删除:</p>
+<li><p>文件(目录)的删除: 1. 文件的删除:</p>
+
+<pre><code>  $ rm a
+</code></pre>
 
 <ol>
-<li><p>文件的删除:</p>
-
-<pre><code>$ rm a
-</code></pre></li>
-
 <li><p>目录的删除:</p>
 
 <pre><code>rm -r a
 </code></pre></li>
 </ol></li>
+</ol>
 
-<li><p>文件的修改:</p>
+<p>4)  文件的修改:</p>
 
 <ol>
 <li><p>打开文件:</p>
 
-<pre><code>$ start(open) (文件名) 
-</code></pre></li>
-</ol>
+<pre><code>$ start(open) (文件名)
+</code></pre>
 
 <p>2.修改文件:(在文件中另起一行写入内容)</p>
 
@@ -296,27 +291,30 @@
 <p>命令的组合:</p>
 
 <ol>
-<li><p>命令的成功或失败:</p>
+<li>命令的成功或失败:</li>
+</ol>
 
 <ul>
-<li>如果成功什么都不提示，如果失败会提示error</li>
-</ul></li>
+<li>如果成功什么都不提示，如果失败会提示 error</li>
+</ul>
 
-<li><p>&amp;&amp;操作:</p>
+<ol>
+<li>&amp;&amp;操作:</li>
+</ol>
 
 <ul>
-<li>n个命令组合，第一个成功后执行第二个，以此类推。</li>
+<li>n 个命令组合，第一个成功后执行第二个，以此类推。</li>
 <li>例: <code>&amp; rm 1.txt &amp;&amp; echo 成功</code></li>
-</ul></li>
+</ul>
 
-<li><p>;操作:</p>
+<ol>
+<li>;操作:</li>
+</ol>
 
 <ul>
 <li>不管当前命令是否执行，都会执行下一条</li>
-<li>例: $ <code>rm 1.txt ;echo 成功</code>
-<br /></li>
+<li>例: \$ <code>rm 1.txt ;echo 成功</code></li>
 </ul></li>
-</ol></li>
 </ol>
 <ul class="pa0">
   
