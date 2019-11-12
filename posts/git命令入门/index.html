@@ -45,7 +45,7 @@
 
 <meta itemprop="datePublished" content="2019-11-12T20:40:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-12T20:40:01&#43;08:00" />
-<meta itemprop="wordCount" content="195">
+<meta itemprop="wordCount" content="210">
 
 
 
@@ -184,19 +184,23 @@
 
 <pre><code>  $ ls 路径名
 </code></pre></li>
-
-<li><p>查看文件内容：</p>
-
-<pre><code>&amp; cat 路径
-&amp; head 路径
-&amp; tail 路径
-&amp; less 路径
-</code></pre></li>
-</ul>
+</ul></li>
+</ol>
 
 <p><img src="/images/4.png" alt="" /></p>
 
-<p>几种查找的区别:</p>
+<pre><code>   * 查看文件内容：
+
+   ```
+    &amp; cat 路径
+    &amp; head 路径
+    &amp; tail 路径
+    &amp; less 路径
+    ```
+</code></pre>
+
+<p><img src="images/12.png" alt="" />
+几种查找的区别:</p>
 
 <ul>
 <li>cat 显示文件内的全部内容</li>
@@ -206,8 +210,9 @@
 </ul>
 
 <ol>
-<li><p>文件的增加:</p></li>
+<li><p>文件的增加:</p>
 
+<ol>
 <li><p>创建文件:</p>
 
 <ul>
@@ -248,64 +253,63 @@
 </code></pre></li>
 </ul>
 
-<p><img src="/imagescd /9.png" alt="" />
+<p><img src="/imagescd/9.png" alt="" />
 <img src="/images/10.png" alt="" />
 <img src="/images/11.png" alt="" /></p></li>
+</ol></li>
 
 <li><p>文件(目录)的删除: 1. 文件的删除:</p>
 
-<pre><code>  $ rm a
-</code></pre>
+<pre><code>  ```
+  $ rm a
+  ```
 
-<ol>
-<li><p>目录的删除:</p>
+ 1. 目录的删除:
 
-<pre><code>rm -r a
+   ```
+   rm -r a
+   ```
 </code></pre></li>
-</ol></li>
 </ol>
 
 <p>3)  文件的修改:</p>
 
-<ol>
-<li><p>打开文件:</p>
+<pre><code>1. 打开文件:
 
-<pre><code>$ start(open) (文件名)
+```
+$ start(open) (文件名)
+```
+
+     2.修改文件:(在文件中另起一行写入内容)
+
+```
+$ echo &quot;(内容)“ &gt;&gt; (文件名)
+```
+
+      3.清空文件:
+
+     ```
+     $ echo &quot;&quot; &gt;&gt; (文件名)
+     ```
 </code></pre>
-
-<p>2.修改文件:(在文件中另起一行写入内容)</p>
-
-<pre><code>$ echo &quot;(内容)“ &gt;&gt; (文件名)
-</code></pre>
-
-<p>3.清空文件:</p>
-
-<pre><code> $ echo &quot;&quot; &gt;&gt; (文件名)
-</code></pre></li>
-</ol>
 
 <p>命令的组合:</p>
 
 <ol>
-<li>命令的成功或失败:</li>
-</ol>
+<li><p>命令的成功或失败:</p>
 
 <ul>
 <li>如果成功什么都不提示，如果失败会提示 error</li>
-</ul>
+</ul></li>
 
-<ol>
-<li>&amp;&amp;操作:</li>
-</ol>
+<li><p>&amp;&amp;操作:</p>
 
 <ul>
 <li>n 个命令组合，第一个成功后执行第二个，以此类推。</li>
 <li>例: <code>&amp; rm 1.txt &amp;&amp; echo 成功</code></li>
-</ul>
+</ul></li>
 
-<ol>
-<li>;操作:</li>
-</ol>
+<li><p>;操作:</p>
 
 <ul>
 <li>不管当前命令是否执行，都会执行下一条</li>
