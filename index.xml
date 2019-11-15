@@ -6,10 +6,39 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Tue, 12 Nov 2019 20:40:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 22:18:26 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML入门</title>
+      <link>https://gy-coder.xyz/posts/html%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 15 Nov 2019 22:18:26 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/html%E5%85%A5%E9%97%A8/</guid>
+      <description>HTML入门 HTML的由来: HTML 是由蒂姆·伯纳斯－李（Tim Berners-Lee）创建  HTML的起手: 在Vscode中创建html文件后，在英文状态下输入!后按tab键就会生成html的基本结构
+HTML基本结构的含义:  &amp;lt;!DOCTYPE html&amp;gt;
+告诉浏览器文档类型是html
+ &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+告诉浏览器页面的语言是英语，可以改为zh-CN，网页的语言就是中文。在浏览器的翻译功能中，就是依赖该字段去翻译。
+ &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot; /&amp;gt;
+告诉浏览器文件的字符编码是UTF-8
+ &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;
+禁用缩放，兼容手机
+ &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;
+告诉IE浏览器使用最新的内核
+ &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+该页面的标题为Document,用户可修改
+  章节标签  标题标签 h1&amp;ndash;h6:
+&amp;lt;h1&amp;gt;标题1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;标题2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;标题3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;标题4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;标题5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;标题6&amp;lt;/h6&amp;gt;  章节标签:
+&amp;lt;section&amp;gt;章节&amp;lt;/section&amp;gt;  段落标签:
+&amp;lt;p&amp;gt;这是一段话······&amp;lt;/p&amp;gt;  头部标签:
+&amp;lt;header&amp;gt;这是头部&amp;lt;/header&amp;gt;  尾部标签:
+&amp;lt;footer&amp;gt;这是尾部&amp;lt;/footer&amp;gt;  主要内容:
+&amp;lt;main&amp;gt;这是主要内容&amp;lt;main&amp;gt;  旁支内容(可用于写导航):
+&amp;lt;aside&amp;gt;旁支内容&amp;lt;aside&amp;gt;  文章标签:</description>
+    </item>
     
     <item>
       <title>Git命令入门</title>
