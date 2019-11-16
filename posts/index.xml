@@ -6,10 +6,39 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 15 Nov 2019 22:18:26 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Nov 2019 15:23:52 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML重难点标签</title>
+      <link>https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Sat, 16 Nov 2019 15:23:52 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/</guid>
+      <description>HTML重难点标签 a标签  作用:
+ 跳转到外部页面 跳转到内部锚点 跳转到邮箱或者电话号码等  属性:
+ href属性:
+ 用途:在内部写入跳转地址 href的取值
+ 网址:
+ http://baidu.com https://google.com //google.com  路径:
+ /a/b/c a/b/c  伪协议:
+ javascript伪协议:
+javascript:(代码);
+应用在使a标签实现点击后不跳转不刷新上
+&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;查看&amp;lt;/a&amp;gt;  邮箱：点击后发送邮件给冒号后的地址
+mailto:(邮箱名)
+ 电话号:点击后打电话给冒号后的号码
+tel:电话号
+  id:用于内部跳转
+href=#xxx
+   target属性:
+ 属性内容:
+ _black :在新的页面打开 _self : 在单签页面打开 _top: 在顶级窗口打开 _parent : 在单签页面上一层的iframe打开   程序员命名:
+如果没有程序员自命的target属性值，则新开一个名为target属性值的窗口，否则会在target属性值的窗口中跳转
+    table标签  table内写的标签</description>
+    </item>
     
     <item>
       <title>HTML入门</title>
