@@ -17,7 +17,8 @@
       <pubDate>Fri, 15 Nov 2019 22:18:26 +0800</pubDate>
       
       <guid>https://gy-coder.xyz/posts/html%E5%85%A5%E9%97%A8/</guid>
-      <description>HTML 入门 HTML 的由来: HTML 是由蒂姆·伯纳斯－李（Tim Berners-Lee）创建  HTML 的起手: 在 Vscode 中创建 html 文件后，在英文状态下输入!后按 tab 键就会生成 html 的基本结构
+      <description>HTML 入门 HTML 的由来: HTML 是由蒂姆·伯纳斯－李(Tim Berners-Lee 创建)
+HTML 的起手: 在 Vscode 中创建 html 文件后，在英文状态下输入!后按 tab 键就会生成 html 的基本结构
 HTML 基本结构的含义:  &amp;lt;!DOCTYPE html&amp;gt;
 告诉浏览器文档类型是 html
  &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
