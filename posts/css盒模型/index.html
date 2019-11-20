@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | CSS盒模型</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="CSS盒模型" />
+<meta property="og:description" content="CSS盒模型 盒模型是CSS的重点之一，也是难点之一
+CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。
+盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+当我们在浏览器中按下F12 就可以看到元素的盒模型
+ 盒模型基本元素:
+ 宽度:width 高度height 边距:margin 边框:border 内边距:padding(一个元素的内容和其边界之间的空间) 内容区content  盒模型的分类:
+盒模型分为content-box和border-box两种
+在声明时用box-sizing:content-box/border-box来声明
+ content-box:
+content-box是指内容盒，内容就是盒子的边界
+在content-box中
+width = 内容的宽度
+盒子的大小 = border &#43; padding &#43; 内容的宽度
+ border-box:
+border-box是指边框盒，边框才是盒子的边界
+在border-box中
+width = border &#43; padding &#43; 内容区
+盒子的大小 = width
+  用实际体会一下两者的不同:
+&lt;body&gt; &lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt; &lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt; &lt;/body&gt;  .content-box{ margin: 10px; padding:20px; border:5px solid red; box-sizing:content-box; width: 100px; } .border-box{ margin: 10px; padding:20px; border:5px solid green; box-sizing:border-box; width: 100px; }  在这两种不同的盒模型中，div的显示效果如图" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B/" />
+<meta property="article:published_time" content="2019-11-20T16:10:34+08:00" />
+<meta property="article:modified_time" content="2019-11-20T16:10:34+08:00" />
+<meta itemprop="name" content="CSS盒模型">
+<meta itemprop="description" content="CSS盒模型 盒模型是CSS的重点之一，也是难点之一
+CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。
+盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+当我们在浏览器中按下F12 就可以看到元素的盒模型
+ 盒模型基本元素:
+ 宽度:width 高度height 边距:margin 边框:border 内边距:padding(一个元素的内容和其边界之间的空间) 内容区content  盒模型的分类:
+盒模型分为content-box和border-box两种
+在声明时用box-sizing:content-box/border-box来声明
+ content-box:
+content-box是指内容盒，内容就是盒子的边界
+在content-box中
+width = 内容的宽度
+盒子的大小 = border &#43; padding &#43; 内容的宽度
+ border-box:
+border-box是指边框盒，边框才是盒子的边界
+在border-box中
+width = border &#43; padding &#43; 内容区
+盒子的大小 = width
+  用实际体会一下两者的不同:
+&lt;body&gt; &lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt; &lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt; &lt;/body&gt;  .content-box{ margin: 10px; padding:20px; border:5px solid red; box-sizing:content-box; width: 100px; } .border-box{ margin: 10px; padding:20px; border:5px solid green; box-sizing:border-box; width: 100px; }  在这两种不同的盒模型中，div的显示效果如图">
+
+
+<meta itemprop="datePublished" content="2019-11-20T16:10:34&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-20T16:10:34&#43;08:00" />
+<meta itemprop="wordCount" content="72">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS盒模型"/>
+<meta name="twitter:description" content="CSS盒模型 盒模型是CSS的重点之一，也是难点之一
+CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。
+盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+当我们在浏览器中按下F12 就可以看到元素的盒模型
+ 盒模型基本元素:
+ 宽度:width 高度height 边距:margin 边框:border 内边距:padding(一个元素的内容和其边界之间的空间) 内容区content  盒模型的分类:
+盒模型分为content-box和border-box两种
+在声明时用box-sizing:content-box/border-box来声明
+ content-box:
+content-box是指内容盒，内容就是盒子的边界
+在content-box中
+width = 内容的宽度
+盒子的大小 = border &#43; padding &#43; 内容的宽度
+ border-box:
+border-box是指边框盒，边框才是盒子的边界
+在border-box中
+width = border &#43; padding &#43; 内容区
+盒子的大小 = width
+  用实际体会一下两者的不同:
+&lt;body&gt; &lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt; &lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt; &lt;/body&gt;  .content-box{ margin: 10px; padding:20px; border:5px solid red; box-sizing:content-box; width: 100px; } .border-box{ margin: 10px; padding:20px; border:5px solid green; box-sizing:border-box; width: 100px; }  在这两种不同的盒模型中，div的显示效果如图"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">CSS盒模型</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-11-20T16:10:34&#43;08:00">November 20, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="css盒模型">CSS盒模型</h1>
+
+<p><strong>盒模型是CSS的重点之一，也是难点之一</strong></p>
+
+<p><strong>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</strong></p>
+
+<p><strong>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</strong></p>
+
+<p><strong>当我们在浏览器中按下F12 就可以看到元素的盒模型</strong></p>
+
+<p><img src="../../images/7.png" alt="" /></p>
+
+<ol>
+<li><p>盒模型基本元素:</p>
+
+<ul>
+<li>宽度:width</li>
+<li>高度height</li>
+<li>边距:margin</li>
+<li>边框:border</li>
+<li>内边距:padding(一个元素的内容和其边界之间的空间)</li>
+<li>内容区content</li>
+</ul></li>
+
+<li><p>盒模型的分类:</p>
+
+<p>盒模型分为content-box和border-box两种</p>
+
+<p>在声明时用box-sizing:content-box/border-box来声明</p></li>
+
+<li><p>content-box:</p>
+
+<p>content-box是指内容盒，内容就是盒子的边界</p>
+
+<p>在content-box中</p>
+
+<p>width = 内容的宽度</p>
+
+<p>盒子的大小 = border + padding + 内容的宽度</p>
+
+<p><img src="./../../images/5.png" alt="" /></p></li>
+
+<li><p>border-box:</p>
+
+<p>border-box是指边框盒，边框才是盒子的边界</p>
+
+<p>在border-box中</p>
+
+<p>width = border + padding + 内容区</p>
+
+<p>盒子的大小 = width</p>
+
+<p><img src="../../images/6.png" alt="" /></p></li>
+</ol>
+
+<p>用实际体会一下两者的不同:</p>
+
+<pre><code class="language-HTML">&lt;body&gt;
+&lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt;
+&lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<pre><code class="language-CSS">.content-box{
+  margin: 10px;
+  padding:20px;
+  border:5px solid red;
+  box-sizing:content-box;
+  width: 100px;
+}
+.border-box{
+  margin: 10px;
+  padding:20px;
+  border:5px solid green;
+  box-sizing:border-box;
+  width: 100px;
+}
+</code></pre>
+
+<p>在这两种不同的盒模型中，div的显示效果如图</p>
+
+<p><img src="../../images/8.png" alt="" /></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2019 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

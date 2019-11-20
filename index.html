@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2019-11-16T15:23:52+08:00" />
+<meta property="og:updated_time" content="2019-11-20T16:10:34+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,49 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="color-inherit dim link">
+            CSS盒模型
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          CSS盒模型 盒模型是CSS的重点之一，也是难点之一
+CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。
+盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。
+当我们在浏览器中按下F12 就可以看到元素的盒模型
+ 盒模型基本元素:
+ 宽度:width 高度height 边距:margin 边框:border 内边距:padding(一个元素的内容和其边界之间的空间) 内容区content  盒模型的分类:
+盒模型分为content-box和border-box两种
+在声明时用box-sizing:content-box/border-box来声明
+ content-box:
+content-box是指内容盒，内容就是盒子的边界
+在content-box中
+width = 内容的宽度
+盒子的大小 = border + padding + 内容的宽度
+ border-box:
+border-box是指边框盒，边框才是盒子的边界
+在border-box中
+width = border + padding + 内容区
+盒子的大小 = width
+  用实际体会一下两者的不同:
+&lt;body&gt; &lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt; &lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt; &lt;/body&gt;  .content-box{ margin: 10px; padding:20px; border:5px solid red; box-sizing:content-box; width: 100px; } .border-box{ margin: 10px; padding:20px; border:5px solid green; box-sizing:border-box; width: 100px; }  在这两种不同的盒模型中，div的显示效果如图
+        </div>
+          <a href="https://gy-coder.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/" class="color-inherit dim link">
             HTML重难点标签
             </a>
@@ -197,37 +240,18 @@ HTML 基本结构的含义:  &lt;!DOCTYPE html&gt;
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
-            Git命令入门
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          命令基础 命令是计算机编程学习者所具备的基本功之一，下面我们就来简单的讨论一下命令以及所需要的知识点 命令所需要的英语词汇: 为了加深对命令内容的理解，我们简单的介绍一些涉及命令的基本词汇。  file &ndash;&gt; 文件 remove &ndash;&gt; 删除 recursive &ndash;&gt; 递归的 make &ndash;&gt; 制作 copy &ndash;&gt; 拷贝 link &ndash;&gt; 链接 move &ndash;&gt; 移动 list &ndash;&gt; 列表 echo &ndash;&gt; 回声 touch &ndash;&gt; 触摸 change &ndash;&gt; 改变 directory &ndash;&gt; 目录 force &ndash;&gt; 强制  命令的缩写:
- file &ndash; 无 remove &ndash; rm recursive &ndash; 无 make &ndash; mk copy &ndash; cp link &ndash;ls move &ndash; mv list &ndash; ls echo &ndash; echo touch &ndash; touch change &ndash; cd 中的 c directory &ndash; cd 中的 d force &ndash; f  用命令对文件进行增删改查的操作:  查看文件与目录:
-        </div>
-          <a href="https://gy-coder.xyz/posts/git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/" class="link black dim">
+              Git命令入门
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
