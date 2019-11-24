@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Wed, 20 Nov 2019 16:10:34 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 17:50:23 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS之flex布局</title>
+      <link>https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Sun, 24 Nov 2019 17:50:23 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/</guid>
+      <description>什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
+flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
+如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
+&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
+.container{ flex-direction:row/row-reverse/column/column-reverse }  一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小
+ items 换行:
+.container{ flex-wrap:nowrap/wrap/wrap-reverse; }  nowrap 是默认值，不换行
+ 主轴对齐方式:
+.container{ justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; }  默认主轴是横轴
+ 次轴对齐:</description>
+    </item>
     
     <item>
       <title>CSS盒模型</title>

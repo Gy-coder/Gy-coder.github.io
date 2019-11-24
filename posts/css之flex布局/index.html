@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | CSS之flex布局</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="CSS之flex布局" />
+<meta property="og:description" content="什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&rdquo;弹性布局&rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
+flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
+如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
+&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
+.container{ flex-direction:row/row-reverse/column/column-reverse }  一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小
+ items 换行:
+.container{ flex-wrap:nowrap/wrap/wrap-reverse; }  nowrap 是默认值，不换行
+ 主轴对齐方式:
+.container{ justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; }  默认主轴是横轴
+ 次轴对齐:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/" />
+<meta property="article:published_time" content="2019-11-24T17:50:23+08:00" />
+<meta property="article:modified_time" content="2019-11-24T17:50:23+08:00" />
+<meta itemprop="name" content="CSS之flex布局">
+<meta itemprop="description" content="什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&rdquo;弹性布局&rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
+flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
+如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
+&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
+.container{ flex-direction:row/row-reverse/column/column-reverse }  一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小
+ items 换行:
+.container{ flex-wrap:nowrap/wrap/wrap-reverse; }  nowrap 是默认值，不换行
+ 主轴对齐方式:
+.container{ justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; }  默认主轴是横轴
+ 次轴对齐:">
+
+
+<meta itemprop="datePublished" content="2019-11-24T17:50:23&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-24T17:50:23&#43;08:00" />
+<meta itemprop="wordCount" content="211">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS之flex布局"/>
+<meta name="twitter:description" content="什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&rdquo;弹性布局&rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
+flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
+如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
+&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
+.container{ flex-direction:row/row-reverse/column/column-reverse }  一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小
+ items 换行:
+.container{ flex-wrap:nowrap/wrap/wrap-reverse; }  nowrap 是默认值，不换行
+ 主轴对齐方式:
+.container{ justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; }  默认主轴是横轴
+ 次轴对齐:"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">CSS之flex布局</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-11-24T17:50:23&#43;08:00">November 24, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h2 id="什么是-flex-布局">什么是 flex 布局？</h2>
+
+<p><strong>flex 是 Flexible Box 的缩写，意为&rdquo;弹性布局&rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器</strong></p>
+
+<h2 id="flex-布局的结构">flex 布局的结构</h2>
+
+<p>Flex 布局由容器 container 和容器内的元素 items 构成</p>
+
+<p><img src="../../images/9.png" alt="" /></p>
+
+<h2 id="如何使用-flex-布局">如何使用 flex 布局？</h2>
+
+<p>使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局</p>
+
+<pre><code class="language-HTML">&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-CSS">.container{
+    display:flex/inline-flex;
+}
+</code></pre>
+
+<h2 id="容器的样式">容器的样式</h2>
+
+<ol>
+<li><p>items 的流动方式(主轴方向):</p>
+
+<pre><code class="language-CSS">.container{
+flex-direction:row/row-reverse/column/column-reverse
+}
+</code></pre>
+
+<p><img src="../../images/10.png" alt="" /></p>
+
+<p><img src="../../images/11.png" alt="" /></p>
+
+<p><img src="../../images/12.png" alt="" /></p>
+
+<p><img src="../../images/13.png" alt="" /></p>
+
+<p><strong>一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小</strong></p></li>
+
+<li><p>items 换行:</p>
+
+<pre><code class="language-CSS">.container{
+    flex-wrap:nowrap/wrap/wrap-reverse;
+}
+</code></pre>
+
+<p>nowrap 是默认值，不换行</p></li>
+
+<li><p>主轴对齐方式:</p>
+
+<pre><code class="language-CSS">.container{
+    justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly;
+}
+</code></pre>
+
+<p><img src="../../images/14.png" alt="" /></p>
+
+<p><img src="../../images/15.png" alt="" /></p>
+
+<p><img src="../../images/16.png" alt="" /></p>
+
+<p><img src="../../images/17.png" alt="" /></p>
+
+<p><img src="../../images/18.png" alt="" /></p>
+
+<p><img src="../../images/19.png" alt="" /></p>
+
+<p><strong>默认主轴是横轴</strong></p></li>
+
+<li><p>次轴对齐:</p>
+
+<pre><code class="language-CSS">.container{
+    align-items:flex-start/flex-end/center/stretch;
+}
+</code></pre>
+
+<p><img src="../../images/20.png" alt="" /></p>
+
+<p><img src="../../images/21.png" alt="" /></p>
+
+<p><img src="../../images/22.png" alt="" /></p>
+
+<p><img src="../../images/23.png" alt="" /></p>
+
+<p><strong>默认次轴是纵轴</strong></p></li>
+
+<li><p>多行内容(不常用):</p>
+
+<pre><code class="language-CSS">.container{
+    align-content:flex-start/flex-end/center/stretch/space-between/space-around;
+}
+</code></pre></li>
+</ol>
+
+<h2 id="容器内元素-items-样式">容器内元素(items)样式</h2>
+
+<ol>
+<li><p>order 属性:</p>
+
+<p>用于改变 items 的显示顺序，以 order 值从小到大的排序，默认值是 0;</p>
+
+<pre><code class="language-HTML">&lt;div class=&quot;container&quot;&gt;
+ &lt;div class=&quot;items&quot;&gt;1&lt;/div&gt;
+ &lt;div class=&quot;items&quot;&gt;2&lt;/div&gt;
+ &lt;div class=&quot;items&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-CSS"> .container {
+     border: 1px solid red;
+     width: 800px;
+     height: 400px;
+     display: flex;
+   }
+
+   .items:first-child {
+     width: 100px;
+     height: 200px;
+     order: 100;
+     border: 1px solid #000;
+   }
+
+   .items:nth-child(2) {
+     width: 100px;
+     height: 200px;
+     order: 2;
+     border: 1px solid #000;
+   }
+
+   .items:nth-child(3) {
+     width: 100px;
+     height: 200px;
+     order: 30;
+     border: 1px solid #000;
+   }
+</code></pre>
+
+<p><img src="../../images/24.png" alt="" /></p></li>
+
+<li><p>flex-grow 属性:</p>
+
+<p>按属性值的比例分配剩余空间，0 为不分配</p>
+
+<pre><code class="language-HTML">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;items&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;items&quot;&gt;2&lt;/div&gt;
+  &lt;div class=&quot;items&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-CSS">  .container {
+    border: 1px solid red;
+    width: 800px;
+    height: 400px;
+    display: flex;
+  }
+
+  .items:first-child {
+    flex-grow: 1;
+    height: 50%;
+    border: 1px solid black;
+  }
+
+  .items:nth-child(2) {
+    flex-grow: 2;
+    height: 50%;
+    border: 1px solid black;
+  }
+
+  .items:nth-child(3) {
+    flex-grow: 0;
+    height: 50%;
+    border: 1px solid black;
+  }
+</code></pre>
+
+<p><img src="../../images/25.png" alt="" /></p></li>
+
+<li><p>flex-shrink 属性:</p>
+
+<p>在视窗大小不足时，控制收缩的速率，0 为不收缩</p></li>
+
+<li><p>align-self 属性:</p>
+
+<p>对单个属性进行 align-items 的调整</p></li>
+</ol>
+
+<h2 id="flex-布局应用">flex 布局应用</h2>
+
+<p><a href="http://js.jirengu.com/zopucucehu/1/edit?html,css,output">flex 布局例子</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2019 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
