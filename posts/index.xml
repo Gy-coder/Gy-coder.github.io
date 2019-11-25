@@ -17,7 +17,7 @@
       <pubDate>Sun, 24 Nov 2019 17:50:23 +0800</pubDate>
       
       <guid>https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/</guid>
-      <description>什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;布局，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
+      <description>什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
 flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
 如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
 &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
