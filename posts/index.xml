@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Wed, 27 Nov 2019 16:05:56 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 18:41:55 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS动画及浏览器渲染原理</title>
+      <link>https://gy-coder.xyz/posts/css%E5%8A%A8%E7%94%BB%E5%8F%8A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Wed, 27 Nov 2019 18:41:55 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/css%E5%8A%A8%E7%94%BB%E5%8F%8A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/</guid>
+      <description>浏览器的渲染原理  浏览器的渲染过程：
+ 根据 HTML 建立 HTML 树(DOM) 根据 CSS 建立 CSS 树(CSSOM) 将两课树合并成一颗渲染树 Layout 布局(文档流，盒模型，计算大小和位置) paint 绘制(把边框颜色，文字颜色，阴影等画出来) compose 合成(根本层叠关系展示画面)
+  三种更新方式:
+ JavaScript &amp;ndash;&amp;gt; Style &amp;ndash;&amp;gt; Layout &amp;ndash;&amp;gt; Paint &amp;ndash;&amp;gt; composite
+例:div.remove()会使当前元素消失，其他元素 relayout
+ JavaScript &amp;ndash;&amp;gt; Style &amp;ndash;&amp;gt; Paint &amp;ndash;&amp;gt; composite
+例:改变 background，直接 repaint + composite
+ JavaScript &amp;ndash;&amp;gt; Style &amp;ndash;&amp;gt; composite
+例:改变 transform，只需 composite
+   CSS 动画优化 CSS 动画优化的方式有很多，本文主要讲解两个方面，如果您想了解完全可以参考该链接
+ Js 优化:
+使用 requestAnimationFrame 代替 SetInterVal 和 setTimeOut</description>
+    </item>
     
     <item>
       <title>CSS之grid布局</title>
