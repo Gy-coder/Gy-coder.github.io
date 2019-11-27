@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2019-11-24T17:50:23+08:00" />
+<meta property="og:updated_time" content="2019-11-27T16:05:56+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,39 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/css%E4%B9%8Bgrid%E5%B8%83%E5%B1%80/" class="color-inherit dim link">
+            CSS之grid布局
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          grid 布局简介 grid 布局是 CSS 一种功能强大的布局方案，常用于二维布局
+grid 的布局结构 和 flex 布局一样，grid 布局也分为容器部分(container)和容器内元素部分(items)
+如何使用 grid 布局？ 使用 grid 布局比较简单，只需要在 CSS 中声明容器是 grid 容器就可以使用 grid 布局
+&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:grid/inline-grid; }  划分 grid 容器 grid-template-rows 属性用于划分网格行
+grid-template-columns 属性用于划分网格列
+属性的取值可以是非负数长度，可以是百分数，也可以是 fr
+fr 是将空间按照份数成比例划分
+.container{ grid-template-rows:25% 100px auto; grid-template-columns:40px 50px auto 50px 40px; }  如何为 items 选定范围？ 只需要确定构成 item 范围的四根线则可以确定 item 的范围，通过以下四个属性则可以确定
+ grid-column-start grid-column-end grid-row-start grid-row-end
+.items:nth-child(x){ grid-column-start:2; grid-column-end:5; grid-row-start:1; grid-row-end:3; }   划分例子 &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; &lt;/div&gt;  .
+        </div>
+          <a href="https://gy-coder.xyz/posts/css%E4%B9%8Bgrid%E5%B8%83%E5%B1%80/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/" class="color-inherit dim link">
             CSS之flex布局
             </a>
@@ -190,56 +223,18 @@ width = border + padding + 内容区
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/" class="color-inherit dim link">
-            HTML重难点标签
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          HTML重难点标签 a标签  作用:
- 跳转到外部页面 跳转到内部锚点 跳转到邮箱或者电话号码等  属性:
- href属性:
- 用途:在内部写入跳转地址 href的取值
- 网址:
- http://baidu.com https://google.com //google.com  路径:
- /a/b/c a/b/c  伪协议:
- javascript伪协议:
-javascript:(代码);
-应用在使a标签实现点击后不跳转不刷新上
-&lt;a href=&quot;javascript:;&quot;&gt;查看&lt;/a&gt;  邮箱：点击后发送邮件给冒号后的地址
-mailto:(邮箱名)
- 电话号:点击后打电话给冒号后的号码
-tel:电话号
-  id:用于内部跳转
-href=#xxx
-   target属性:
- 属性内容:
- _black :在新的页面打开 _self : 在单签页面打开 _top: 在顶级窗口打开 _parent : 在单签页面上一层的iframe打开   程序员命名:
-如果没有程序员自命的target属性值，则新开一个名为target属性值的窗口，否则会在target属性值的窗口中跳转
-    table标签  table内写的标签
-        </div>
-          <a href="https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/" class="link black dim">
+              HTML重难点标签
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/html%E5%85%A5%E9%97%A8/" class="link black dim">
