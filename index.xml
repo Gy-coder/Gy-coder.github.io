@@ -68,6 +68,17 @@ flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 
     </item>
     
     <item>
+      <title>CSS之float布局</title>
+      <link>https://gy-coder.xyz/posts/css%E4%B9%8Bfloat%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Sun, 24 Nov 2019 12:07:00 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/css%E4%B9%8Bfloat%E5%B8%83%E5%B1%80/</guid>
+      <description>Float 布局简介 Float 布局是一种经典的布局方式，对 IE 浏览器可以做到很好的兼容，在兼容 IE6/7 时，首选 Float 布局
+Float 布局的步骤  子元素上加 float:left/right 在父元素上加 class=“clearfix” (重要)
+.clearfix::after{ content:&amp;quot;&amp;quot;; display:block; clear:both; }   Float 布局的经验  留一些空间或最后一个不设 width 无需考虑响应式(IE6/7 不存在移动端) IE6/7 存在双倍 margin 的 bug，解决方式有两种:  将错就错，针对 IE6/7 把 margin 减半 加上 display:inline-block   Float 不同布局  float 两栏布局:用于顶部条 float 三栏布局:用于内容区 float 四栏布局:导航条 float 平均布局:产品展示区  在 Float 布局过程中的注意事项  如果发现图片下有多余的东西，则在图片的 CSS 属性中加 vertical-align:top/middle border 因为会占据像素可能会对布局产生干扰，可以改用 outline 有 width 的块级元素水平居中的方式</description>
+    </item>
+    
+    <item>
       <title>CSS盒模型</title>
       <link>https://gy-coder.xyz/posts/css%E7%9B%92%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Wed, 20 Nov 2019 16:10:34 +0800</pubDate>
