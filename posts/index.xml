@@ -6,10 +6,25 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Wed, 27 Nov 2019 18:41:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2019 20:51:16 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅谈url</title>
+      <link>https://gy-coder.xyz/posts/%E6%B5%85%E8%B0%88url/</link>
+      <pubDate>Sat, 30 Nov 2019 20:51:16 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/%E6%B5%85%E8%B0%88url/</guid>
+      <description> URL的基础知识  url的简介:
+统一资源定位系统（uniform resource locator;URL）是因特网的万维网服务程序上用于指定信息位置的表示方法。它最初是由蒂姆·伯纳斯·李发明用来作为万维网的地址。现在它已经被万维网联盟编制为互联网标准RFC1738。
+ url的组成:
+url一般由协议 + 域名 + 路径 + 查询参数 + 锚点组成
+ 例子:
+在http://www.baidu.com/s?wd=hello&amp;amp;rsv_spt=1#5中
+ https代表协议 www.baidu.com代表域名 s?代表路径 wd=hello&amp;amp;rsv_spt=1代表查询参数 #5代表锚点   </description>
+    </item>
     
     <item>
       <title>CSS动画及浏览器渲染原理</title>
