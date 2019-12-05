@@ -6,10 +6,29 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Thu, 05 Dec 2019 20:24:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2019 21:22:40 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript基础语法</title>
+      <link>https://gy-coder.xyz/posts/javascript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 05 Dec 2019 21:22:40 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/javascript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <description>表达式和语句  表达式
+如下的代码我们称之为表达式
+1 + 2 //表达式的值为3 add(1,2) //表达式的值为函数的返回值 console.log //返回值为函数本身 console.log(3) //返回值为Undefined  语句
+如下的代码我们称之为语句
+var a = 1;  表达式和语句的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值)   注：这种区别不是绝对的
+标识符  规则
+ 第一个字符可以是Unicode字符或$或_或中文 后面的字符，除上面所说，还可以是数字  变量名也是标识符
+var _ = 1; var $ = 2; var 你好 = ‘hi’; var _____ = 6;   JavaScript语句  if语句
+ 语法
+if(表达式){ 语句; }else{ 语句; }  注:{}在语句仅有一句时可以省略 But 非常不建议这样做</description>
+    </item>
     
     <item>
       <title>JavaScript的诞生</title>
