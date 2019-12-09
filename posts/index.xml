@@ -6,10 +6,26 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Thu, 05 Dec 2019 21:22:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 20:30:58 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript的基本数据类型</title>
+      <link>https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 09 Dec 2019 20:30:58 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>JavaScript的七种数据类型  数字类型 number 字符串类型 String 布尔类型 bool 符号 Symbol 空 undefined 空 null 对象 Object  JavaScript的数据类型可以总结为四基(数字、字符串、布尔、符号)两空(undefined、null)一对象(Object)
+数据类型的详细介绍  数字类型number
+ 写法
+1 //整数写法 0.1 //浮点数写法 1.23e4 //科学计数法，值为1.23 * (10^4) 0123 00123 0o123 //八进制写法 0xF1F //十六进制写法 0b1011 //二进制写法  特殊值
+ 正0与负0:在一般情况下二者没有区别，但是在除0时，正负就出现作用了，如果是正0，则除法结果是正无穷，如果是负0，则除法的结果为负无穷
+1/0 //结果为+Infinity 1/-0 //结果为-Infinity  无穷大:有 +Infinity 和 -Infinity 之分
+  NaN:
+ NaN是指我们无法用现有的数学内容所表示出来的数字，他也是数字的一种 关于NaN的一些注意事项  从bool逻辑上讲，NaN为false 从等于上讲NaN不等于任何东西 包括他本身(NaN === NaN的返回值为false)    字符串类型String</description>
+    </item>
     
     <item>
       <title>JavaScript基础语法</title>
