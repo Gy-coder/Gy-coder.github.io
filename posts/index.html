@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2019-12-09T20:30:58+08:00" />
+<meta property="og:updated_time" content="2019-12-09T22:40:19+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,33 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
+        JavaScript对象的简单介绍
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      对象的写法 对象一共有两种写法，具体写法如下
+let obj = { 'name' : 'kim', 'age' : 100 }  let obj = new Object({'name':'kim','age':100})  关于对象的一些细节
+ 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
+每一个key都是对象的属性名
+ 属性值
+每一个value都是对象的属性值
+ 一些奇葩的属性名
+let obj = { 1:'a', 3.2:'b', 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
+使用Object.keys(obj)方法可以看到对象的所有关键值，例如
+  读取属性  查看对象的所有属性
+Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
+obj.hasOwnProperty('属性名')  原型
+ 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -299,41 +326,6 @@ width = border + padding + 内容区
 盒子的大小 = width
   用实际体会一下两者的不同:
 &lt;body&gt; &lt;div class=&quot;content-box&quot;&gt;内容盒&lt;/div&gt; &lt;div class=&quot;border-box&quot;&gt;边框盒&lt;/div&gt; &lt;/body&gt;  .content-box{ margin: 10px; padding:20px; border:5px solid red; box-sizing:content-box; width: 100px; } .border-box{ margin: 10px; padding:20px; border:5px solid green; box-sizing:border-box; width: 100px; }  在这两种不同的盒模型中，div的显示效果如图
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/html%E9%87%8D%E9%9A%BE%E7%82%B9%E6%A0%87%E7%AD%BE/" class="link black dim">
-        HTML重难点标签
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      HTML重难点标签 a标签  作用:
- 跳转到外部页面 跳转到内部锚点 跳转到邮箱或者电话号码等  属性:
- href属性:
- 用途:在内部写入跳转地址 href的取值
- 网址:
- http://baidu.com https://google.com //google.com  路径:
- /a/b/c a/b/c  伪协议:
- javascript伪协议:
-javascript:(代码);
-应用在使a标签实现点击后不跳转不刷新上
-&lt;a href=&quot;javascript:;&quot;&gt;查看&lt;/a&gt;  邮箱：点击后发送邮件给冒号后的地址
-mailto:(邮箱名)
- 电话号:点击后打电话给冒号后的号码
-tel:电话号
-  id:用于内部跳转
-href=#xxx
-   target属性:
- 属性内容:
- _black :在新的页面打开 _self : 在单签页面打开 _top: 在顶级窗口打开 _parent : 在单签页面上一层的iframe打开   程序员命名:
-如果没有程序员自命的target属性值，则新开一个名为target属性值的窗口，否则会在target属性值的窗口中跳转
-    table标签  table内写的标签
     </div>
   </div>
 </div>

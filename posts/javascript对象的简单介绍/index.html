@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | JavaScript对象的简单介绍</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="JavaScript对象的简单介绍" />
+<meta property="og:description" content="对象的写法 对象一共有两种写法，具体写法如下
+let obj = { &#39;name&#39; : &#39;kim&#39;, &#39;age&#39; : 100 }  let obj = new Object({&#39;name&#39;:&#39;kim&#39;,&#39;age&#39;:100})  关于对象的一些细节
+ 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
+每一个key都是对象的属性名
+ 属性值
+每一个value都是对象的属性值
+ 一些奇葩的属性名
+let obj = { 1:&#39;a&#39;, 3.2:&#39;b&#39;, 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
+使用Object.keys(obj)方法可以看到对象的所有关键值，例如
+  读取属性  查看对象的所有属性
+Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
+obj.hasOwnProperty(&#39;属性名&#39;)  原型
+ 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" />
+<meta property="article:published_time" content="2019-12-09T22:40:19+08:00" />
+<meta property="article:modified_time" content="2019-12-09T22:40:19+08:00" />
+<meta itemprop="name" content="JavaScript对象的简单介绍">
+<meta itemprop="description" content="对象的写法 对象一共有两种写法，具体写法如下
+let obj = { &#39;name&#39; : &#39;kim&#39;, &#39;age&#39; : 100 }  let obj = new Object({&#39;name&#39;:&#39;kim&#39;,&#39;age&#39;:100})  关于对象的一些细节
+ 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
+每一个key都是对象的属性名
+ 属性值
+每一个value都是对象的属性值
+ 一些奇葩的属性名
+let obj = { 1:&#39;a&#39;, 3.2:&#39;b&#39;, 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
+使用Object.keys(obj)方法可以看到对象的所有关键值，例如
+  读取属性  查看对象的所有属性
+Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
+obj.hasOwnProperty(&#39;属性名&#39;)  原型
+ 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性">
+
+
+<meta itemprop="datePublished" content="2019-12-09T22:40:19&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-09T22:40:19&#43;08:00" />
+<meta itemprop="wordCount" content="244">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JavaScript对象的简单介绍"/>
+<meta name="twitter:description" content="对象的写法 对象一共有两种写法，具体写法如下
+let obj = { &#39;name&#39; : &#39;kim&#39;, &#39;age&#39; : 100 }  let obj = new Object({&#39;name&#39;:&#39;kim&#39;,&#39;age&#39;:100})  关于对象的一些细节
+ 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
+每一个key都是对象的属性名
+ 属性值
+每一个value都是对象的属性值
+ 一些奇葩的属性名
+let obj = { 1:&#39;a&#39;, 3.2:&#39;b&#39;, 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
+使用Object.keys(obj)方法可以看到对象的所有关键值，例如
+  读取属性  查看对象的所有属性
+Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
+obj.hasOwnProperty(&#39;属性名&#39;)  原型
+ 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">JavaScript对象的简单介绍</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-09T22:40:19&#43;08:00">December 9, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="对象的写法">对象的写法</h1>
+
+<p>对象一共有两种写法，具体写法如下</p>
+
+<pre><code class="language-JavaScript">let obj = {
+    'name' : 'kim',
+    'age' : 100
+}
+</code></pre>
+
+<pre><code class="language-JavaScript">let obj = new Object({'name':'kim','age':100})
+</code></pre>
+
+<p>关于对象的一些细节</p>
+
+<ul>
+<li>键名是字符串，不是标识符，可以包含任何字符</li>
+<li>引号可以省略，省略后只能写标识符</li>
+<li>就算引号省略，键名也是字符串
+<br /></li>
+</ul>
+
+<h1 id="对象的属性名和属性值">对象的属性名和属性值</h1>
+
+<ol>
+<li><p>属性名</p>
+
+<p>每一个key都是对象的属性名</p></li>
+
+<li><p>属性值</p>
+
+<p>每一个value都是对象的属性值</p></li>
+
+<li><p>一些奇葩的属性名</p>
+
+<pre><code class="language-JavaScript">let obj = {
+    1:'a',
+    3.2:'b',
+    1e2:true,
+    1e-2:true,
+    .231:false,
+    0xff:3
+}
+</code></pre>
+
+<p>在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示</p>
+
+<p>使用Object.keys(obj)方法可以看到对象的所有关键值，例如</p>
+
+<p><img src="/images/30.png" alt="" /></p></li>
+</ol>
+
+<h1 id="读取属性">读取属性</h1>
+
+<ol>
+<li><p>查看对象的所有属性</p>
+
+<pre><code class="language-JavaScript">Object.keys(obj)     //查看自己的所有属性
+console.dir(obj)     //查看自身与共有的属性
+</code></pre>
+
+<p>如何判断属性的自己的还是共有的？</p>
+
+<pre><code class="language-JavaScript">obj.hasOwnProperty('属性名')
+</code></pre></li>
+
+<li><p>原型</p>
+
+<ul>
+<li>每个对象都有原型
+
+<ul>
+<li>原型存着对象的共有属性</li>
+<li>obj的原型的原型就是对象，obj.<strong>proto</strong>存着这个对象的地址</li>
+<li>这个对象里有toString/constructor/valueOf等属性</li>
+</ul></li>
+<li>对象的原型也是对象
+
+<ul>
+<li>对象的原型也有原型</li>
+<li>obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根</li>
+<li>这个根也有原型，是null
+<br /></li>
+</ul></li>
+</ul>
+
+<p><img src="../../images/31.png" alt="" /></p></li>
+
+<li><p>查看属性</p>
+
+<pre><code class="language-JavaScript">//查看属性有两种方法，一种是点语法，一种是中括号语法
+obj['key']    //中括号语法
+obj.key       //点语法
+</code></pre>
+
+<p><strong>注:[]语法中，括号内比如为字符串，如果不是字符串会先求表达式的值，然后找属性。发生错乱</strong></p>
+
+<pre><code class="language-JavaScript">let name = 'kim';
+obj[kim]    
+//实际上这个obj[name]是等价于obj['kim'] obj.kim的
+</code></pre>
+
+<p>一个小例题:打印person所有属性</p>
+
+<pre><code class="language-JavaScript">let list = ['name','age','gender'];
+let person = {
+    name = 'kim',
+    age:100,
+    gender:'boy'
+}
+for(let i = 0; i &lt; list.length; i++){
+    let name = list[i];
+    //----？----
+}
+// ？内代码选项  
+//1. console.log(person.name)  
+//2. console.log(person[name])
+</code></pre></li>
+</ol>
+
+<h1 id="删除属性">删除属性</h1>
+
+<ol>
+<li><p>删除属性的方法</p>
+
+<p>利用delete方法删除属性</p>
+
+<pre><code class="language-JavaScript"> delete obj.xxx   
+ delete obj['xxx']
+</code></pre></li>
+
+<li><p>注意事项</p>
+
+<p>要区分不含属性和属性值为undefined的区别</p>
+
+<pre><code class="language-JavaScript"> 'xxx' in obj === false //不含有属性xxx
+ 'xxx' in obj === true &amp;&amp; obj.xxx === undefined  //含有xxx属性但是值为undefined
+</code></pre>
+
+<p>无法用obj.xxx === undefined来判断xxx是否为obj属性</p></li>
+</ol>
+
+<h1 id="增加与更改属性">增加与更改属性</h1>
+
+<ol>
+<li><p>直接赋值</p>
+
+<pre><code class="language-JavaScript">let obj = {
+    name : 'kim'
+}  //name是字符串
+
+obj.name = 'kim'   //name是字符串
+obj['name'] = 'kim'  //name是字符串
+</code></pre>
+
+<pre><code class="language-JavaScript">obj[name] = 'kim'   //错，因为name是变量名，变量的值不确定
+</code></pre>
+
+<pre><code class="language-JavaScript">let key = 'name'
+obj[key] = 'kim'
+//正确，key变量的值为字符串name 等价于obj['name'] = 'kim'
+</code></pre>
+
+<pre><code class="language-JavaScript">let key = 'name'
+obj.key = 'kim'
+//错误，等价于obj['key']
+</code></pre></li>
+
+<li><p>批量赋值</p>
+
+<p>用Object.assign方法</p>
+
+<pre><code class="language-JavaScript"> Object.assign(obj,{name:'kim',age:100})
+</code></pre></li>
+
+<li><p>修改和增加共有属性</p>
+
+<ul>
+<li><p>无法通过自身修改和增加共有属性</p>
+
+<pre><code class="language-JavaScript">let obj ={}
+let obj2 = {}
+obj.toString = '123'   //只会修改obj自身的属性
+//obj2.toString还在原型上
+</code></pre></li>
+
+<li><p>修改或增加原型链上的属性</p>
+
+<pre><code class="language-JavaScript">obj.__proto__.toString = '123'    //不推荐使用__proto__
+obj.prototype.toString = '123'
+</code></pre></li>
+
+<li><p><strong>一般来说不推荐修改原型，会出现很多问题</strong></p></li>
+</ul></li>
+
+<li><p>修改隐藏属性(<strong>proto</strong>)</p>
+
+<ul>
+<li><p>不推荐使用<strong>proto</strong></p>
+
+<pre><code class="language-JavaScript">let obj = {
+  name:'kim'
+}
+let obj2 = {
+  name:'jim'
+}
+let common = {
+  kind:'human'
+}
+obj.__proto__ = common;
+obj2.__proto__ = common;
+</code></pre></li>
+
+<li><p>推荐使用Object.create方法</p>
+
+<p>Object.create的功能:Object.create()方法创建一个新对象，使用现有的对象来提供新创建的对象的<strong>proto</strong></p>
+
+<pre><code class="language-JavaScript">let common = {
+    kind:'human'
+}
+let obj = Object.create(common);
+//创建一个名为obj的对象，它的原型为common对象
+</code></pre></li>
+</ul></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2019 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
