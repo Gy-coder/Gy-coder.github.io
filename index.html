@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-01-10T20:45:05+08:00" />
+<meta property="og:updated_time" content="2020-01-10T21:59:43+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,41 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="color-inherit dim link">
+            作用域和闭包
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          作用域 { let a = 1 }  如上述代码所示，一个{}就代表了一个作用域，a变量只能在作用域内访问到
+每一个函数都能够创建一个作用域
+例如:
+function f1(){ let a = 1 } console.log(a) //Uncaught ReferenceError: a is not defined  Q:上述代码中a不存在的原因是否是f1没有执行？
+A:即使函数f1执行，a一样不存在
+function f1(){ let a = 1 } f1() console.log(a)  Q:打印出多少？
+A:a还是不存在，因为无法访问到作用域内的a
+全局变量和局部变量  全局变量
+ 在顶级作用域中声明的变量成为全局变量 在window属性内的都是全局变量  局部变量
+ 其他都是局部变量    作用域规则  如果有多个作用域中存在同一个变量a
+ 查找a的声明时，就向上取最近的作用域 查找a的过程与函数的执行无关 但a的值与函数的执行有关  例如
+function f1(){ //1.定义f1 let a = 1 //3.
+        </div>
+          <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="color-inherit dim link">
             Js函数的执行时机
             </a>
@@ -172,48 +207,18 @@ let square1 = { width:5, getArea(){ return this.width * this.width }, getLength(
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="color-inherit dim link">
-            JavaScript对象的简单介绍
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          对象的写法 对象一共有两种写法，具体写法如下
-let obj = { 'name' : 'kim', 'age' : 100 }  let obj = new Object({'name':'kim','age':100})  关于对象的一些细节
- 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
-每一个key都是对象的属性名
- 属性值
-每一个value都是对象的属性值
- 一些奇葩的属性名
-let obj = { 1:'a', 3.2:'b', 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
-使用Object.keys(obj)方法可以看到对象的所有关键值，例如
-  读取属性  查看对象的所有属性
-Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
-obj.hasOwnProperty('属性名')  原型
- 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性
-        </div>
-          <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
+              JavaScript对象的简单介绍
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="link black dim">
@@ -230,12 +235,6 @@ obj.hasOwnProperty('属性名')  原型
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="link black dim">
               JavaScript的诞生
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/%E6%B5%85%E8%B0%88url/" class="link black dim">
-              浅谈url
             </a>
           </h2>
         

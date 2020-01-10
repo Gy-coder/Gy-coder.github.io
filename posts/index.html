@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-01-10T20:45:05+08:00" />
+<meta property="og:updated_time" content="2020-01-10T21:59:43+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,32 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
+        作用域和闭包
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      作用域 { let a = 1 }  如上述代码所示，一个{}就代表了一个作用域，a变量只能在作用域内访问到
+每一个函数都能够创建一个作用域
+例如:
+function f1(){ let a = 1 } console.log(a) //Uncaught ReferenceError: a is not defined  Q:上述代码中a不存在的原因是否是f1没有执行？
+A:即使函数f1执行，a一样不存在
+function f1(){ let a = 1 } f1() console.log(a)  Q:打印出多少？
+A:a还是不存在，因为无法访问到作用域内的a
+全局变量和局部变量  全局变量
+ 在顶级作用域中声明的变量成为全局变量 在window属性内的都是全局变量  局部变量
+ 其他都是局部变量    作用域规则  如果有多个作用域中存在同一个变量a
+ 查找a的声明时，就向上取最近的作用域 查找a的过程与函数的执行无关 但a的值与函数的执行有关  例如
+function f1(){ //1.定义f1 let a = 1 //3.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -291,30 +317,6 @@ fr 是将空间按照份数成比例划分
 .container{ grid-template-rows:25% 100px auto; grid-template-columns:40px 50px auto 50px 40px; }  如何为 items 选定范围？ 只需要确定构成 item 范围的四根线则可以确定 item 的范围，通过以下四个属性则可以确定
  grid-column-start grid-column-end grid-row-start grid-row-end
 .items:nth-child(x){ grid-column-start:2; grid-column-end:5; grid-row-start:1; grid-row-end:3; }   划分例子 &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; &lt;/div&gt;  .
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/css%E4%B9%8Bflex%E5%B8%83%E5%B1%80/" class="link black dim">
-        CSS之flex布局
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      什么是 flex 布局？ flex 是 Flexible Box 的缩写，意为&rdquo;弹性布局&rdquo;，是 CSS 布局的方式之一，flex 布局已经支持大多数浏览器
-flex 布局的结构 Flex 布局由容器 container 和容器内的元素 items 构成
-如何使用 flex 布局？ 使用 flex 布局比较简单，只需要在 CSS 中声明容器是 flex 容器就可以使用 flex 布局
-&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:flex/inline-flex; }  容器的样式  items 的流动方式(主轴方向):
-.container{ flex-direction:row/row-reverse/column/column-reverse }  一个小 bug: 当 items 过多的时候不会另起一行，而是会挤压，items 会变小
- items 换行:
-.container{ flex-wrap:nowrap/wrap/wrap-reverse; }  nowrap 是默认值，不换行
- 主轴对齐方式:
-.container{ justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; }  默认主轴是横轴
- 次轴对齐:
     </div>
   </div>
 </div>
