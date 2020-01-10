@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Mon, 09 Dec 2019 22:40:19 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 22:19:27 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>再讨论JavaScript的对象</title>
+      <link>https://gy-coder.xyz/posts/%E5%86%8D%E8%AE%A8%E8%AE%BAjavascript%E7%9A%84%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Tue, 17 Dec 2019 22:19:27 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/%E5%86%8D%E8%AE%A8%E8%AE%BAjavascript%E7%9A%84%E5%AF%B9%E8%B1%A1/</guid>
+      <description>创建一个正方形的小例子 一个正方形有边长，周长，面积，因此我们用一个对象来封装一个正方形
+let Square = { width:5, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } }  利用这个对象，我们可以创建多个正方形，例如
+let square1 = { width:5, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } } let square2 = { width:10, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } } let square3 = { width:20, getArea(){ return this.width * this.width }, getLength(){ return this.</description>
+    </item>
     
     <item>
       <title>JavaScript对象的简单介绍</title>
