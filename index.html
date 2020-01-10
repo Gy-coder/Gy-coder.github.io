@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2019-12-17T22:19:27+08:00" />
+<meta property="og:updated_time" content="2020-01-10T20:45:05+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,38 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="color-inherit dim link">
+            Js函数的执行时机
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          一些小例子 例1 let a = 1 function fn(){ console.log(a) }  Q:打印多出少？
+A:不知道，因为函数没有执行
+例2 let a = 1 function fn(){ console.log(a) } fn()  Q:打印多出少？
+A:1
+例3 let a = 1 function fn(){ console.log(a) } a = 2 fn()  Q:打印多出少？
+A:2
+例4 let a = 1; function fn(){ console.log(a) } fn() a = 2  Q:打印多出少？
+A:1
+例5 let a = 1 function fn(){ setTimeout(()=&gt;{ console.log(a) },0) } a = 2 fn()  Q:打印多出少？
+        </div>
+          <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/%E5%86%8D%E8%AE%A8%E8%AE%BAjavascript%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="color-inherit dim link">
             再讨论JavaScript的对象
             </a>
@@ -176,43 +208,18 @@ obj.hasOwnProperty('属性名')  原型
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="color-inherit dim link">
-            JavaScript的基本数据类型
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          JavaScript的七种数据类型  数字类型 number 字符串类型 String 布尔类型 bool 符号 Symbol 空 undefined 空 null 对象 Object  JavaScript的数据类型可以总结为四基(数字、字符串、布尔、符号)两空(undefined、null)一对象(Object)
-数据类型的详细介绍  数字类型number
- 写法
-1 //整数写法 0.1 //浮点数写法 1.23e4 //科学计数法，值为1.23 * (10^4) 0123 00123 0o123 //八进制写法 0xF1F //十六进制写法 0b1011 //二进制写法  特殊值
- 正0与负0:在一般情况下二者没有区别，但是在除0时，正负就出现作用了，如果是正0，则除法结果是正无穷，如果是负0，则除法的结果为负无穷
-1/0 //结果为+Infinity 1/-0 //结果为-Infinity  无穷大:有 +Infinity 和 -Infinity 之分
-  NaN:
- NaN是指我们无法用现有的数学内容所表示出来的数字，他也是数字的一种 关于NaN的一些注意事项  从bool逻辑上讲，NaN为false 从等于上讲NaN不等于任何东西 包括他本身(NaN === NaN的返回值为false)    字符串类型String
-        </div>
-          <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="link black dim">
+              JavaScript的基本数据类型
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/javascript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="link black dim">
@@ -229,12 +236,6 @@ obj.hasOwnProperty('属性名')  原型
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E6%B5%85%E8%B0%88url/" class="link black dim">
               浅谈url
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/css%E5%8A%A8%E7%94%BB%E5%8F%8A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/" class="link black dim">
-              CSS动画及浏览器渲染原理
             </a>
           </h2>
         
