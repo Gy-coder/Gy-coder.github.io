@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-01-30T19:16:49+08:00" />
+<meta property="og:updated_time" content="2020-01-31T16:46:18+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,32 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/css%E5%8A%A8%E7%94%BB%E5%8F%8A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/" class="link black dim">
+        CSS动画及浏览器渲染原理
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      浏览器的渲染原理  浏览器的渲染过程：
+ 根据 HTML 建立 HTML 树(DOM) 根据 CSS 建立 CSS 树(CSSOM) 将两课树合并成一颗渲染树 Layout 布局(文档流，盒模型，计算大小和位置) paint 绘制(把边框颜色，文字颜色，阴影等画出来) compose 合成(根据层叠关系展示画面)
+  三种更新方式:
+ JavaScript &ndash;&gt; Style &ndash;&gt; Layout &ndash;&gt; Paint &ndash;&gt; composite
+例:div.remove()会使当前元素消失，其他元素 relayout
+ JavaScript &ndash;&gt; Style &ndash;&gt; Paint &ndash;&gt; composite
+例:改变 background，直接 repaint + composite
+ JavaScript &ndash;&gt; Style &ndash;&gt; composite
+例:改变 transform，只需 composite
+   CSS 动画优化 CSS 动画优化的方式有很多，本文主要讲解两个方面，如果您想了解完全可以参考该链接
+ Js 优化:
+使用 requestAnimationFrame 代替 SetInterVal 和 setTimeOut
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">

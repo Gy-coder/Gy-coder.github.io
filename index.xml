@@ -6,10 +6,21 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Thu, 30 Jan 2020 19:16:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jan 2020 16:46:18 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JQuery设计模式</title>
+      <link>https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Fri, 31 Jan 2020 16:46:18 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>jQuery简介 jQuery是目前使用最广泛的javascript函数库。
+据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
+jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返回这些元素，而是返回一个对象 这个对象称作为jQuery对象，jQuery对象可以操作相应的元素  jQuery部分实现 window.$ = window.jQuery = function(selectorOrArrayOrTemplate){ let elements //element是个DOM数组 if(typeof selectorOrArrayOrTemplate === &#39;string&#39;){ if(selectorOrArrayOrTemplate[0] === &#39;&amp;lt;&#39;){ // 如果参数是标签字符串就创建DOM对象 elements = [createElement(selectorOrArrayOrTemplate)] }else{ // 如果是选择器就查询 elements = document.querySelectorAll(selectorOrArrayOrTemplate) } }else if(selectorOrArrayOrTemplate instanceof Array){ elements = selectorOrArrayOrTemplate } function createElement(string){ let container = document.createElement(&#39;template&#39;) container.innerHTML = string.trim() return container.content.firstChild } // 以上是初始化elements的内容 const api = Object.create(jQuery.prototype) Object.assign(api,{ elements:elements, oldApi:selectorOrArrayOrTemplate }) // 创建jQuery对象 return api } $.</description>
+    </item>
     
     <item>
       <title>Dom操作简介</title>
