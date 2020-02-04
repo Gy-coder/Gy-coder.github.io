@@ -6,10 +6,33 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 10 Jan 2020 21:59:43 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 19:16:49 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dom操作简介</title>
+      <link>https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Thu, 30 Jan 2020 19:16:49 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/</guid>
+      <description>DOM简介 Document Object Model (DOM) 为文档对象模型， 它使用对象的表示方式来表示对应的文档结构及其中的内容。
+DOM的结构可以表示成树形结构
+通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。 浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
+如何用JavaScript获取HTML中的节点  通过标签的一些属性来获取
+document.getElementById(&#39;id&#39;) document.getElementsByclassName(&#39;class&#39;)[0] document.getElementsByTagName(&#39;div&#39;)[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定  通过CSS选择器来获取
+document.querySelector(&#39;#id&#39;) document.querySelectorAll(&#39;.class&#39;)[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定   这么多方法我该如何选择？
+如果不需要兼容IE直接使用2中的方法，要兼容IE就选择1中的方法
+用JavaScript获取特定元素  获取HTML元素
+document.documentElement  获取head元素
+document.head  获取body元素
+document.body  获取窗口(窗口不是元素)
+window  获取所有元素
+document.all  document.all是继五大falsy值之后的第6个falsy值
+  节点的增删改查 节点的创建  创建标签节点
+let div = document.createElement(&#39;div&#39;) document.</description>
+    </item>
     
     <item>
       <title>作用域和闭包</title>
