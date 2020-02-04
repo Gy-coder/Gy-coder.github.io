@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-01-31T16:46:18+08:00" />
+<meta property="og:updated_time" content="2020-01-31T18:29:29+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,42 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="color-inherit dim link">
+            JQuery小结
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          jQuery简介 jQuery是目前使用最广泛的javascript函数库。
+据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
+用jQuery创建元素 用jQuery创建元素很简单，只要把新元素直接传入jQuery的构造函数就行了
+$('&lt;p&gt;Hello&lt;/p&gt;'); $('&lt;li class=&quot;new&quot;&gt;new list item&lt;/li&gt;');  jQuery选择网页元素 jQuery的基本设计思想和主要用法，就是&rdquo;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+使用jQuery的第一步，往往就是将一个选择表达式，放进构造函数jQuery()（简写为$），然后得到被选中的元素。
+可以用CSS选择器来选择网页元素
+$('#myId') //选择ID为myId的网页元素 $('div.myClass') // 选择class为myClass的div元素 $('input[name=first]') // 选择name属性等于first的input元素  也可以是jQuery特有的表达式
+$('a:first') //选择网页中第一个a元素 $('div:animated') // 选择当前处于动画状态的div元素 $('div:visible') //选择可见的div元素  改变结果集 jQuery设计思想之二，就是提供各种强大的过滤器，对结果集进行筛选，缩小选择结果。
+$('div').has('p'); // 选择包含p元素的div元素 $('div').first(); //选择第1个div元素 $('div').eq(5); //选择第6个div元素  有时候，我们需要从结果集出发，移动到附近的相关元素，jQuery也提供了在DOM树上的移动方法：
+$('div').next('p'); //选择div元素后面的第一个p元素 $('div').parent(); //选择div元素的父元素 $('div').children(); //选择div的所有子元素 $('div').siblings(); //选择div的同级元素  链式操作 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$('#test').find('.class').addClass('red').end()  分解开来就是这样
+$('#test'). //找到id为test的元素 .find('.class') //选择test底下类名为class的元素 .addclass('red') //为它添加一个名为red的类 .end() //返回到id为test的那个元素  这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
+元素的取值和赋值 操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。
+        </div>
+          <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="color-inherit dim link">
             JQuery设计模式
             </a>
@@ -178,47 +214,18 @@ let div = document.createElement('div') document.
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="color-inherit dim link">
-            作用域和闭包
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          作用域 { let a = 1 }  如上述代码所示，一个{}就代表了一个作用域，a变量只能在作用域内访问到
-每一个函数都能够创建一个作用域
-例如:
-function f1(){ let a = 1 } console.log(a) //Uncaught ReferenceError: a is not defined  Q:上述代码中a不存在的原因是否是f1没有执行？
-A:即使函数f1执行，a一样不存在
-function f1(){ let a = 1 } f1() console.log(a)  Q:打印出多少？
-A:a还是不存在，因为无法访问到作用域内的a
-全局变量和局部变量  全局变量
- 在顶级作用域中声明的变量成为全局变量 在window属性内的都是全局变量  局部变量
- 其他都是局部变量    作用域规则  如果有多个作用域中存在同一个变量a
- 查找a的声明时，就向上取最近的作用域 查找a的过程与函数的执行无关 但a的值与函数的执行有关  例如
-function f1(){ //1.定义f1 let a = 1 //3.
-        </div>
-          <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
+              作用域和闭包
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
@@ -235,12 +242,6 @@ function f1(){ //1.定义f1 let a = 1 //3.
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
               JavaScript对象的简单介绍
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="link black dim">
-              JavaScript的基本数据类型
             </a>
           </h2>
         

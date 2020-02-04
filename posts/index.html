@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-01-31T16:46:18+08:00" />
+<meta property="og:updated_time" content="2020-01-31T18:29:29+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,33 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="link black dim">
+        JQuery小结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jQuery简介 jQuery是目前使用最广泛的javascript函数库。
+据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
+用jQuery创建元素 用jQuery创建元素很简单，只要把新元素直接传入jQuery的构造函数就行了
+$('&lt;p&gt;Hello&lt;/p&gt;'); $('&lt;li class=&quot;new&quot;&gt;new list item&lt;/li&gt;');  jQuery选择网页元素 jQuery的基本设计思想和主要用法，就是&rdquo;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
+使用jQuery的第一步，往往就是将一个选择表达式，放进构造函数jQuery()（简写为$），然后得到被选中的元素。
+可以用CSS选择器来选择网页元素
+$('#myId') //选择ID为myId的网页元素 $('div.myClass') // 选择class为myClass的div元素 $('input[name=first]') // 选择name属性等于first的input元素  也可以是jQuery特有的表达式
+$('a:first') //选择网页中第一个a元素 $('div:animated') // 选择当前处于动画状态的div元素 $('div:visible') //选择可见的div元素  改变结果集 jQuery设计思想之二，就是提供各种强大的过滤器，对结果集进行筛选，缩小选择结果。
+$('div').has('p'); // 选择包含p元素的div元素 $('div').first(); //选择第1个div元素 $('div').eq(5); //选择第6个div元素  有时候，我们需要从结果集出发，移动到附近的相关元素，jQuery也提供了在DOM树上的移动方法：
+$('div').next('p'); //选择div元素后面的第一个p元素 $('div').parent(); //选择div元素的父元素 $('div').children(); //选择div的所有子元素 $('div').siblings(); //选择div的同级元素  链式操作 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$('#test').find('.class').addClass('red').end()  分解开来就是这样
+$('#test'). //找到id为test的元素 .find('.class') //选择test底下类名为class的元素 .addclass('red') //为它添加一个名为red的类 .end() //返回到id为test的那个元素  这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
+元素的取值和赋值 操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -292,27 +319,6 @@ if(表达式){ 语句; }else{ 语句; }  注:{}在语句仅有一句时可以省
 JavaScript 与 Java 的关系 JavaScript 与 Java 这门语言不管是在名字上，或是在语法上都有很多相似性，但这两门编程语言从设计之初就有很大的不同，JavaScript 的语言设计主要受到了 Self（一种基于原型的编程语言）和 Scheme（一门函数式编程语言）的影响。在语法结构上它又与 C 语言有很多相似（例如 if 条件语句、switch 语句、while 循环、do-while 循环等）。
 JavaScript 的历史  肇始于网景:
 1993 年，伊利诺伊大学厄巴纳-尚佩恩分校的国家超级电脑应用中心（NCSA）发表了 NCSA Mosaic，这是最早流行的图形接口网页浏览器，它在万维网的普及上发挥了重要作用。1994 年，一家名为 Mosaic Communications 的公司在加州芒廷维尤成立了，并雇用了许多原来的 NCSA Mosaic 开发者用来开发 Mosaic Netscape，该公司的目标是取代 NCSA Mosaic 成为世界第一的网页浏览器。第一个版本的网页浏览器 Mosaic Netscape 0.9 于 1994 年底发布。在四个月内，已经占据了四分之三的浏览器市场，并成为 1990 年代互联网的主要浏览器。为避免 NCSA 的商标所有权问题，该浏览器于同年更名为 Netscape Navigator，该公司命名为 Netscape Communications。网景预见到网络需要变得更动态。公司的创始人马克·安德森认为 HTML 需要一种胶水语言，让网页设计师和兼职程序员可以很容易地使用它来组装图片和插件之类的组件，且代码可以直接编写在网页标记中。
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/%E6%B5%85%E8%B0%88url/" class="link black dim">
-        浅谈url
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       URL的基础知识  url的简介:
-统一资源定位系统（uniform resource locator;URL）是因特网的万维网服务程序上用于指定信息位置的表示方法。它最初是由蒂姆·伯纳斯·李发明用来作为万维网的地址。现在它已经被万维网联盟编制为互联网标准RFC1738。
- url的组成:
-url一般由协议 + 域名 + 路径 + 查询参数 + 锚点组成
- 例子:
-在http://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5中
- https代表协议 www.baidu.com代表域名 s?代表路径 wd=hello&amp;rsv_spt=1代表查询参数 #5代表锚点   
     </div>
   </div>
 </div>

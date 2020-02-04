@@ -6,10 +6,31 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 31 Jan 2020 16:46:18 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jan 2020 18:29:29 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JQuery小结</title>
+      <link>https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/</link>
+      <pubDate>Fri, 31 Jan 2020 18:29:29 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/</guid>
+      <description>jQuery简介 jQuery是目前使用最广泛的javascript函数库。
+据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
+用jQuery创建元素 用jQuery创建元素很简单，只要把新元素直接传入jQuery的构造函数就行了
+$(&#39;&amp;lt;p&amp;gt;Hello&amp;lt;/p&amp;gt;&#39;); $(&#39;&amp;lt;li class=&amp;quot;new&amp;quot;&amp;gt;new list item&amp;lt;/li&amp;gt;&#39;);  jQuery选择网页元素 jQuery的基本设计思想和主要用法，就是&amp;rdquo;选择某个网页元素，然后对其进行某种操作&amp;rdquo;。这是它区别于其他Javascript库的根本特点。
+使用jQuery的第一步，往往就是将一个选择表达式，放进构造函数jQuery()（简写为$），然后得到被选中的元素。
+可以用CSS选择器来选择网页元素
+$(&#39;#myId&#39;) //选择ID为myId的网页元素 $(&#39;div.myClass&#39;) // 选择class为myClass的div元素 $(&#39;input[name=first]&#39;) // 选择name属性等于first的input元素  也可以是jQuery特有的表达式
+$(&#39;a:first&#39;) //选择网页中第一个a元素 $(&#39;div:animated&#39;) // 选择当前处于动画状态的div元素 $(&#39;div:visible&#39;) //选择可见的div元素  改变结果集 jQuery设计思想之二，就是提供各种强大的过滤器，对结果集进行筛选，缩小选择结果。
+$(&#39;div&#39;).has(&#39;p&#39;); // 选择包含p元素的div元素 $(&#39;div&#39;).first(); //选择第1个div元素 $(&#39;div&#39;).eq(5); //选择第6个div元素  有时候，我们需要从结果集出发，移动到附近的相关元素，jQuery也提供了在DOM树上的移动方法：
+$(&#39;div&#39;).next(&#39;p&#39;); //选择div元素后面的第一个p元素 $(&#39;div&#39;).parent(); //选择div元素的父元素 $(&#39;div&#39;).children(); //选择div的所有子元素 $(&#39;div&#39;).siblings(); //选择div的同级元素  链式操作 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
+$(&#39;#test&#39;).find(&#39;.class&#39;).addClass(&#39;red&#39;).end()  分解开来就是这样
+$(&#39;#test&#39;). //找到id为test的元素 .find(&#39;.class&#39;) //选择test底下类名为class的元素 .addclass(&#39;red&#39;) //为它添加一个名为red的类 .end() //返回到id为test的那个元素  这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
+元素的取值和赋值 操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。</description>
+    </item>
     
     <item>
       <title>JQuery设计模式</title>
