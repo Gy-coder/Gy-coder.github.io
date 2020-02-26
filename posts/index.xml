@@ -6,10 +6,31 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 31 Jan 2020 18:29:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 19:35:57 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ajax简介</title>
+      <link>https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Wed, 26 Feb 2020 19:35:57 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/</guid>
+      <description>ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
+ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
+ 浏览器在window上加了一个XMLHttpRequest函数
+ 用这个函数可以构造出一个对象
+ JavaScript可以用这个函数来发送请求和接收响应
+  ajax的用法  创建一个XMLHttpRequest对象
+const request = new XMLHttpRequest()  调用这个对象的open方法
+request.open(&#39;GET&#39;,&#39;/style.css&#39;)  监听对象的onreadystatechange事件
+request.onreadystatechange = ()=&amp;gt;{ //具体代码 }  调用对象的send方法
+request.send()   关于open  open方法接收两个参数
+ 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
+XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
+   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status</description>
+    </item>
     
     <item>
       <title>JQuery小结</title>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Ajax简介</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Ajax简介" />
+<meta property="og:description" content="ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
+ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
+ 浏览器在window上加了一个XMLHttpRequest函数
+ 用这个函数可以构造出一个对象
+ JavaScript可以用这个函数来发送请求和接收响应
+  ajax的用法  创建一个XMLHttpRequest对象
+const request = new XMLHttpRequest()  调用这个对象的open方法
+request.open(&#39;GET&#39;,&#39;/style.css&#39;)  监听对象的onreadystatechange事件
+request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
+request.send()   关于open  open方法接收两个参数
+ 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
+XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
+   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" />
+<meta property="article:published_time" content="2020-02-26T19:35:57+08:00" />
+<meta property="article:modified_time" content="2020-02-26T19:35:57+08:00" />
+<meta itemprop="name" content="Ajax简介">
+<meta itemprop="description" content="ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
+ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
+ 浏览器在window上加了一个XMLHttpRequest函数
+ 用这个函数可以构造出一个对象
+ JavaScript可以用这个函数来发送请求和接收响应
+  ajax的用法  创建一个XMLHttpRequest对象
+const request = new XMLHttpRequest()  调用这个对象的open方法
+request.open(&#39;GET&#39;,&#39;/style.css&#39;)  监听对象的onreadystatechange事件
+request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
+request.send()   关于open  open方法接收两个参数
+ 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
+XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
+   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status">
+
+
+<meta itemprop="datePublished" content="2020-02-26T19:35:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-26T19:35:57&#43;08:00" />
+<meta itemprop="wordCount" content="211">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ajax简介"/>
+<meta name="twitter:description" content="ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
+ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
+ 浏览器在window上加了一个XMLHttpRequest函数
+ 用这个函数可以构造出一个对象
+ JavaScript可以用这个函数来发送请求和接收响应
+  ajax的用法  创建一个XMLHttpRequest对象
+const request = new XMLHttpRequest()  调用这个对象的open方法
+request.open(&#39;GET&#39;,&#39;/style.css&#39;)  监听对象的onreadystatechange事件
+request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
+request.send()   关于open  open方法接收两个参数
+ 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
+XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
+   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Ajax简介</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-26T19:35:57&#43;08:00">February 26, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="ajax是什么">ajax是什么？</h1>
+
+<p>AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出</p>
+
+<h1 id="ajax的功能">ajax的功能</h1>
+
+<ul>
+<li><p>ajax的功能就是用JavaScript来发送请求和接收响应</p></li>
+
+<li><p>浏览器在window上加了一个XMLHttpRequest函数</p></li>
+
+<li><p>用这个函数可以构造出一个对象</p></li>
+
+<li><p>JavaScript可以用这个函数来发送请求和接收响应</p></li>
+</ul>
+
+<h1 id="ajax的用法">ajax的用法</h1>
+
+<ol>
+<li><p>创建一个XMLHttpRequest对象</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+</code></pre></li>
+
+<li><p>调用这个对象的open方法</p>
+
+<pre><code class="language-JavaScript">request.open('GET','/style.css')
+</code></pre></li>
+
+<li><p>监听对象的onreadystatechange事件</p>
+
+<pre><code class="language-JavaScript">request.onreadystatechange = ()=&gt;{
+    //具体代码
+}
+</code></pre></li>
+
+<li><p>调用对象的send方法</p>
+
+<pre><code class="language-JavaScript">request.send()
+</code></pre></li>
+</ol>
+
+<h1 id="关于open">关于open</h1>
+
+<ul>
+<li><p>open方法接收两个参数</p>
+
+<ol>
+<li>第一个参数是是请求方式，有GET和POST两种</li>
+<li>第二个参数是请求路径</li>
+</ol></li>
+</ul>
+
+<h1 id="关于onreadystatechange事件">关于onreadystatechange事件</h1>
+
+<ol>
+<li><p>readystate</p>
+
+<p>XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">状态</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">unsent</td>
+<td align="center">创建XMLHTTPRequest</td>
+</tr>
+
+<tr>
+<td align="center">1</td>
+<td align="center">opened</td>
+<td align="center">open方法调用</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">headers-received</td>
+<td align="center">send方法已被调用</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">loading</td>
+<td align="center">下载中(第一个字符已被下载)</td>
+</tr>
+
+<tr>
+<td align="center">4</td>
+<td align="center">done</td>
+<td align="center">下载操作完成</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>status</p>
+
+<ul>
+<li><p>status表示Http状态码</p></li>
+
+<li><p>HTTP 响应状态代码指示特定HTTP请求是否已成功完成。响应分为五类：信息响应(100–199)，成功响应(200–299)，重定向(300–399)，客户端错误(400–499)和服务器错误 (500–599)</p></li>
+
+<li><p>一般请求成功为200，失败为404</p></li>
+
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">具体代码含义可以点击链接</a></p></li>
+</ul></li>
+</ol>
+
+<h1 id="ajax请求范例">ajax请求范例</h1>
+
+<ol>
+<li><p>请求CSS</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+request.open('GET','/style.css')
+request.onreadystatechange =()=&gt;{
+   if(request.readystate === 4 &amp;&amp; request.status === 200){
+       const style = document.createElement('style')
+       style.innerHTML = request.response
+       document.head.appendChild(style)
+   }
+}
+request.send()
+</code></pre></li>
+
+<li><p>请求JavaScript</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+request.open('GET','/javascript.js')
+request.onreadystatechange =()=&gt;{
+   if(request.readystate === 4 &amp;&amp; request.status === 200){
+       const style = document.createElement('script')
+       script.innerHTML = request.response
+       document.body.appendChild(style)
+   }
+}
+request.send()
+</code></pre></li>
+
+<li><p>请求HTML</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+request.open('GET','/other.html')
+request.onreadystatechange =()=&gt;{
+   if(request.readystate === 4 &amp;&amp; request.status === 200){
+       const style = document.createElement('div')
+       div.innerHTML = request.response
+       document.body.appendChild(style)
+   }
+}
+request.send()
+</code></pre></li>
+
+<li><p>请求XML</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+request.open('GET','/newxml.xml')
+request.onreadystatechange =()=&gt;{
+   if(request.readystate === 4 &amp;&amp; request.status === 200){
+       const domobj = request.responseXML
+       const text = domobj.getElementsByTagName('warning')[0].textContent
+       console.log(text.trim())
+   }
+}
+request.send()
+</code></pre></li>
+
+<li><p>请求JSON</p>
+
+<pre><code class="language-JavaScript">const request = new XMLHttpRequest()
+request.open('GET','/newjson.json')
+request.onreadystatechange =()=&gt;{
+   if(request.readystate === 4 &amp;&amp; request.status === 200){
+       const newObject = JSON.parse(request.response)
+       console.log(newObject)
+   }
+}
+request.send()
+</code></pre></li>
+</ol>
+
+<h1 id="关于json">关于JSON</h1>
+
+<ol>
+<li><p>JSON的数据类型</p>
+
+<ol>
+<li>string</li>
+<li>number</li>
+<li>bool</li>
+<li>null</li>
+<li>object</li>
+<li>array</li>
+</ol>
+
+<p><a href="https://www.json.org/json-zh.html">具体语法可以参考官方文档</a></p></li>
+
+<li><p>JSON中的方法</p>
+
+<ol>
+<li><p>parse方法</p>
+
+<ul>
+<li>parse方法讲符合JSON语法的字符串转化为JavaScript中对应类型的数据</li>
+<li>由于JSON的数据类型只有6种，所以转化的数据也只有6种</li>
+<li>如果不符合JSON语法，则直接抛出一个Error对象</li>
+</ul></li>
+
+<li><p>stringify方法</p>
+
+<ul>
+<li>是JSON.parse的逆运算</li>
+<li>由于JavaScript的数据类型比JSON多，所以不一定成功</li>
+<li>如果失败则抛出一个error对象
+
+<br /></li>
+</ul></li>
+</ol></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

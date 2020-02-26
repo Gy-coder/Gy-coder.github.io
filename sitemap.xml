@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gy-coder.xyz/</loc>
-    <lastmod>2020-01-31T18:29:29+08:00</lastmod>
+    <loc>https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/</loc>
+    <lastmod>2020-02-26T19:35:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2020-01-31T18:29:29+08:00</lastmod>
+    <loc>https://gy-coder.xyz/</loc>
+    <lastmod>2020-02-26T19:35:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gy-coder.xyz/posts/</loc>
+    <lastmod>2020-02-26T19:35:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2020-01-31T18:29:29+08:00</lastmod>
   </url>
   

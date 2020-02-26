@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-01-31T18:29:29+08:00" />
+<meta property="og:updated_time" content="2020-02-26T19:35:57+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,42 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="color-inherit dim link">
+            Ajax简介
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
+ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
+ 浏览器在window上加了一个XMLHttpRequest函数
+ 用这个函数可以构造出一个对象
+ JavaScript可以用这个函数来发送请求和接收响应
+  ajax的用法  创建一个XMLHttpRequest对象
+const request = new XMLHttpRequest()  调用这个对象的open方法
+request.open('GET','/style.css')  监听对象的onreadystatechange事件
+request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
+request.send()   关于open  open方法接收两个参数
+ 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
+XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
+   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status
+        </div>
+          <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="color-inherit dim link">
             JQuery小结
             </a>
@@ -176,50 +212,18 @@ jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="color-inherit dim link">
-            Dom操作简介
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          DOM简介 Document Object Model (DOM) 为文档对象模型， 它使用对象的表示方式来表示对应的文档结构及其中的内容。
-DOM的结构可以表示成树形结构
-通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。 浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
-如何用JavaScript获取HTML中的节点  通过标签的一些属性来获取
-document.getElementById('id') document.getElementsByclassName('class')[0] document.getElementsByTagName('div')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定  通过CSS选择器来获取
-document.querySelector('#id') document.querySelectorAll('.class')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定   这么多方法我该如何选择？
-如果不需要兼容IE直接使用2中的方法，要兼容IE就选择1中的方法
-用JavaScript获取特定元素  获取HTML元素
-document.documentElement  获取head元素
-document.head  获取body元素
-document.body  获取窗口(窗口不是元素)
-window  获取所有元素
-document.all  document.all是继五大falsy值之后的第6个falsy值
-  节点的增删改查 节点的创建  创建标签节点
-let div = document.createElement('div') document.
-        </div>
-          <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
+              Dom操作简介
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
@@ -236,12 +240,6 @@ let div = document.createElement('div') document.
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E5%86%8D%E8%AE%A8%E8%AE%BAjavascript%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="link black dim">
               再讨论JavaScript的对象
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
-              JavaScript对象的简单介绍
             </a>
           </h2>
         
