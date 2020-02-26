@@ -282,7 +282,7 @@ request.onreadystatechange =()=&gt;{
    if(request.readystate === 4 &amp;&amp; request.status === 200){
        const style = document.createElement('script')
        script.innerHTML = request.response
-       document.body.appendChild(style)
+       document.body.appendChild(script)
    }
 }
 request.send()
@@ -296,7 +296,7 @@ request.onreadystatechange =()=&gt;{
    if(request.readystate === 4 &amp;&amp; request.status === 200){
        const style = document.createElement('div')
        div.innerHTML = request.response
-       document.body.appendChild(style)
+       document.body.appendChild(div)
    }
 }
 request.send()
