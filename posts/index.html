@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-02-28T16:12:40+08:00" />
+<meta property="og:updated_time" content="2020-02-28T21:26:22+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,27 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/promise/" class="link black dim">
+        Promise
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
+方法一:回调接受两个参数
+fs.readFile('/1.txt',(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+ajax('get','/1.txt',data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax('get','/1.txt',{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
+ 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
+ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax('GET','/1.txt',{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
+调用:
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -303,28 +324,6 @@ let obj = { 1:'a', 3.2:'b', 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中�
 Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
 obj.hasOwnProperty('属性名')  原型
  每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/javascript%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="link black dim">
-        JavaScript的基本数据类型
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      JavaScript的七种数据类型  数字类型 number 字符串类型 String 布尔类型 bool 符号 Symbol 空 undefined 空 null 对象 Object  JavaScript的数据类型可以总结为四基(数字、字符串、布尔、符号)两空(undefined、null)一对象(Object)
-数据类型的详细介绍  数字类型number
- 写法
-1 //整数写法 0.1 //浮点数写法 1.23e4 //科学计数法，值为1.23 * (10^4) 0123 00123 0o123 //八进制写法 0xF1F //十六进制写法 0b1011 //二进制写法  特殊值
- 正0与负0:在一般情况下二者没有区别，但是在除0时，正负就出现作用了，如果是正0，则除法结果是正无穷，如果是负0，则除法的结果为负无穷
-1/0 //结果为+Infinity 1/-0 //结果为-Infinity  无穷大:有 +Infinity 和 -Infinity 之分
-  NaN:
- NaN是指我们无法用现有的数学内容所表示出来的数字，他也是数字的一种 关于NaN的一些注意事项  从bool逻辑上讲，NaN为false 从等于上讲NaN不等于任何东西 包括他本身(NaN === NaN的返回值为false)    字符串类型String
     </div>
   </div>
 </div>

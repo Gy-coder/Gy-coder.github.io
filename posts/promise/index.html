@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Promise</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Promise" />
+<meta property="og:description" content="一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
+方法一:回调接受两个参数
+fs.readFile(&#39;/1.txt&#39;,(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+ajax(&#39;get&#39;,&#39;/1.txt&#39;,data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax(&#39;get&#39;,&#39;/1.txt&#39;,{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
+ 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
+ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax(&#39;GET&#39;,&#39;/1.txt&#39;,{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
+调用:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/promise/" />
+<meta property="article:published_time" content="2020-02-28T21:26:22+08:00" />
+<meta property="article:modified_time" content="2020-02-28T21:26:22+08:00" />
+<meta itemprop="name" content="Promise">
+<meta itemprop="description" content="一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
+方法一:回调接受两个参数
+fs.readFile(&#39;/1.txt&#39;,(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+ajax(&#39;get&#39;,&#39;/1.txt&#39;,data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax(&#39;get&#39;,&#39;/1.txt&#39;,{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
+ 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
+ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax(&#39;GET&#39;,&#39;/1.txt&#39;,{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
+调用:">
+
+
+<meta itemprop="datePublished" content="2020-02-28T21:26:22&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-28T21:26:22&#43;08:00" />
+<meta itemprop="wordCount" content="112">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Promise"/>
+<meta name="twitter:description" content="一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
+方法一:回调接受两个参数
+fs.readFile(&#39;/1.txt&#39;,(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+ajax(&#39;get&#39;,&#39;/1.txt&#39;,data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax(&#39;get&#39;,&#39;/1.txt&#39;,{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
+ 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
+ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax(&#39;GET&#39;,&#39;/1.txt&#39;,{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
+调用:"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Promise</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-28T21:26:22&#43;08:00">February 28, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="一些问题">一些问题</h1>
+
+<ol>
+<li><p>如果异步任务有两个结果，成功或者失败。怎么办？</p>
+
+<p>方法一:回调接受两个参数</p>
+
+<pre><code class="language-JavaScript">fs.readFile('/1.txt',(error,data)=&gt;{
+    if(error){console.log(&quot;加载失败&quot;),return }
+})
+</code></pre>
+
+<p>方法二:搞两个回调</p>
+
+<pre><code class="language-JavaScript">ajax('get','/1.txt',data=&gt;{},error=&gt;{})
+    //前面是请求成功的回调，后面是请求失败的回调
+</code></pre>
+
+<pre><code class="language-JavaScript">ajax('get','/1.txt',{
+    success:()=&gt;{},
+    fail:()=&gt;{}
+})
+    //接受一个对象，有两个属性，分别表示成功和失败
+</code></pre></li>
+
+<li><p>这些方法的不足</p>
+
+<ol>
+<li>不规范，名称五花八门</li>
+<li>容易出现回调地狱，使代码可读性变差</li>
+<li>很难进行错误处理</li>
+</ol></li>
+</ol>
+
+<h1 id="promise-解决这些不足的方法">promise 解决这些不足的方法</h1>
+
+<ol>
+<li><p>以ajax的封装为例，解释promise的封装</p>
+
+<pre><code class="language-JavaScript">ajax = (method,url,options)=&gt;{
+    const {success,fail} = options
+    const request = new XMLHttpRequest()
+    request.open(method,url)
+    request.onreadystatechange = ()=&gt;{
+        if(request.readystate === 4){
+            if(request.status &lt; 400){
+                success.call(null,request.response)
+            }else if(request.status &gt;=400){
+                fail.call(null,request,stauts)
+            }
+        }
+    }
+    request.send()
+}
+ajax('GET','/1.txt',{
+    success(response){},
+    fail:(request,request.status)=&gt;{}
+})
+</code></pre></li>
+
+<li><p>promise的封装和调用</p>
+
+<p>调用:</p>
+
+<pre><code class="language-JavaScript">ajax('get','/1.txt').then((resolve)=&gt;{},(reject)=&gt;{})
+</code></pre>
+
+<p>封装:</p>
+
+<pre><code class="language-JavaScript">ajax = (method,url,options)=&gt;{
+    return new Promise((resolve,reject)=&gt;{
+    const {success,fail} = options
+    const request = new XMLHttpRequest()
+        request.open(method,url)
+        request.onreadystatechange = ()=&gt;{
+            if(request.readystate === 4){
+                if(request.status &lt; 400){
+                    resolve.call(null,request.response)
+                }else if(request.status &gt;= 400){
+                    reject.call(null,request)
+                }
+        }
+    }
+    request.send()
+    })
+}
+</code></pre></li>
+
+<li><p>小结:</p>
+
+<ol>
+<li>第一步:
+
+<ol>
+<li><code>return new Promise((resolve,reject)=&gt;{})</code>
+2. 任务成功调用resolve
+3. 任务失败调用reject
+4. resolve和reje会再调用成功和失败函数</li>
+</ol></li>
+<li>第二步:
+
+<ul>
+<li>使用.then(success,fail)传入成功和失败函数</li>
+</ul></li>
+</ol></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

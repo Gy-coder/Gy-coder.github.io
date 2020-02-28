@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-02-28T16:12:40+08:00" />
+<meta property="og:updated_time" content="2020-02-28T21:26:22+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,36 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/promise/" class="color-inherit dim link">
+            Promise
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
+方法一:回调接受两个参数
+fs.readFile('/1.txt',(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+ajax('get','/1.txt',data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax('get','/1.txt',{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
+ 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
+ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax('GET','/1.txt',{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
+调用:
+        </div>
+          <a href="https://gy-coder.xyz/posts/promise/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="color-inherit dim link">
             异步与回调
             </a>
@@ -182,48 +212,18 @@ XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="color-inherit dim link">
-            JQuery小结
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          jQuery简介 jQuery是目前使用最广泛的javascript函数库。
-据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
-用jQuery创建元素 用jQuery创建元素很简单，只要把新元素直接传入jQuery的构造函数就行了
-$('&lt;p&gt;Hello&lt;/p&gt;'); $('&lt;li class=&quot;new&quot;&gt;new list item&lt;/li&gt;');  jQuery选择网页元素 jQuery的基本设计思想和主要用法，就是&rdquo;选择某个网页元素，然后对其进行某种操作&rdquo;。这是它区别于其他Javascript库的根本特点。
-使用jQuery的第一步，往往就是将一个选择表达式，放进构造函数jQuery()（简写为$），然后得到被选中的元素。
-可以用CSS选择器来选择网页元素
-$('#myId') //选择ID为myId的网页元素 $('div.myClass') // 选择class为myClass的div元素 $('input[name=first]') // 选择name属性等于first的input元素  也可以是jQuery特有的表达式
-$('a:first') //选择网页中第一个a元素 $('div:animated') // 选择当前处于动画状态的div元素 $('div:visible') //选择可见的div元素  改变结果集 jQuery设计思想之二，就是提供各种强大的过滤器，对结果集进行筛选，缩小选择结果。
-$('div').has('p'); // 选择包含p元素的div元素 $('div').first(); //选择第1个div元素 $('div').eq(5); //选择第6个div元素  有时候，我们需要从结果集出发，移动到附近的相关元素，jQuery也提供了在DOM树上的移动方法：
-$('div').next('p'); //选择div元素后面的第一个p元素 $('div').parent(); //选择div元素的父元素 $('div').children(); //选择div的所有子元素 $('div').siblings(); //选择div的同级元素  链式操作 jQuery设计思想之三，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：
-$('#test').find('.class').addClass('red').end()  分解开来就是这样
-$('#test'). //找到id为test的元素 .find('.class') //选择test底下类名为class的元素 .addclass('red') //为它添加一个名为red的类 .end() //返回到id为test的那个元素  这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
-元素的取值和赋值 操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。
-        </div>
-          <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="link black dim">
+              JQuery小结
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
@@ -240,12 +240,6 @@ $('#test'). //找到id为test的元素 .find('.class') //选择test底下类名�
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
               作用域和闭包
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
-              Js函数的执行时机
             </a>
           </h2>
         
