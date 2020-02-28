@@ -213,19 +213,15 @@ ajax('GET','/1.txt',{
 <li><p>小结:</p>
 
 <ol>
-<li><p>第一步:</p>
+<li>第一步:
 
 <ol>
-<li><p>return new Promise((resolve,reject)=&gt;{})</p></li>
-
-<li><p>任务成功调用resolve</p></li>
-
-<li><p>任务失败调用reject</p></li>
-
-<li><p>resolve和reje会再调用成功和失败函数</p></li>
+<li>return new Promise((resolve,reject)=&gt;{})</li>
+<li>任务成功调用resolve</li>
+<li>任务失败调用reject</li>
+<li>resolve和reje会再调用成功和失败函数</li>
 </ol></li>
-
-<li><p>第二步:</p>
+<li>第二步:
 
 <ul>
 <li>使用.then(success,fail)传入成功和失败函数</li>
