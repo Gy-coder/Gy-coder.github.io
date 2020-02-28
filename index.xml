@@ -19,11 +19,10 @@
       <guid>https://gy-coder.xyz/posts/promise/</guid>
       <description>一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
 方法一:回调接受两个参数
-fs.readFile(&#39;/1.txt&#39;,(error,data)=&amp;gt;{ if(error){console.log(&amp;quot;加载失败&amp;quot;),return } })  方法二:搞两个回调
+fs.readFile(&#39;/1.txt&#39;,(error,data)=&amp;gt;{ if(error){console.log(&amp;quot;加载失败&amp;quot;),return } console.log(data.toString()) //成功 })  方法二:搞两个回调
 ajax(&#39;get&#39;,&#39;/1.txt&#39;,data=&amp;gt;{},error=&amp;gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax(&#39;get&#39;,&#39;/1.txt&#39;,{ success:()=&amp;gt;{}, fail:()=&amp;gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
  不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
-ajax = (method,url,options)=&amp;gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&amp;gt;{ if(request.readystate === 4){ if(request.status &amp;lt; 400){ success.call(null,request.response) }else if(request.status &amp;gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax(&#39;GET&#39;,&#39;/1.txt&#39;,{ success(response){}, fail:(request,request.status)=&amp;gt;{} })  promise的封装和调用
-调用:</description>
+ajax = (method,url,options)=&amp;gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&amp;gt;{ if(request.readystate === 4){ if(request.status &amp;lt; 400){ success.call(null,request.response) }else if(request.status &amp;gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax(&#39;GET&#39;,&#39;/1.txt&#39;,{ success(response){}, fail:(request,request.status)=&amp;gt;{} })  promise的封装和调用</description>
     </item>
     
     <item>

@@ -129,11 +129,10 @@
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
           一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
 方法一:回调接受两个参数
-fs.readFile('/1.txt',(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } })  方法二:搞两个回调
+fs.readFile('/1.txt',(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } console.log(data.toString()) //成功 })  方法二:搞两个回调
 ajax('get','/1.txt',data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax('get','/1.txt',{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
  不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
 ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax('GET','/1.txt',{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
-调用:
         </div>
           <a href="https://gy-coder.xyz/posts/promise/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
