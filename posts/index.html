@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-02-26T19:35:57+08:00" />
+<meta property="og:updated_time" content="2020-02-28T16:12:40+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,29 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="link black dim">
+        异步与回调
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -302,31 +325,6 @@ obj.hasOwnProperty('属性名')  原型
 1/0 //结果为+Infinity 1/-0 //结果为-Infinity  无穷大:有 +Infinity 和 -Infinity 之分
   NaN:
  NaN是指我们无法用现有的数学内容所表示出来的数字，他也是数字的一种 关于NaN的一些注意事项  从bool逻辑上讲，NaN为false 从等于上讲NaN不等于任何东西 包括他本身(NaN === NaN的返回值为false)    字符串类型String
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/javascript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="link black dim">
-        JavaScript基础语法
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      表达式和语句  表达式
-如下的代码我们称之为表达式
-1 + 2 //表达式的值为3 add(1,2) //表达式的值为函数的返回值 console.log //返回值为函数本身 console.log(3) //返回值为Undefined  语句
-如下的代码我们称之为语句
-var a = 1;  表达式和语句的区别
- 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值)   注：这种区别不是绝对的
-标识符  规则
- 第一个字符可以是Unicode字符或$或_或中文 后面的字符，除上面所说，还可以是数字  变量名也是标识符
-var _ = 1; var $ = 2; var 你好 = ‘hi’; var _____ = 6;   JavaScript语句  if语句
- 语法
-if(表达式){ 语句; }else{ 语句; }  注:{}在语句仅有一句时可以省略 But 非常不建议这样做
     </div>
   </div>
 </div>

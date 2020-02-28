@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-02-26T19:35:57+08:00" />
+<meta property="og:updated_time" content="2020-02-28T16:12:40+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,38 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="color-inherit dim link">
+            异步与回调
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于
+        </div>
+          <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="color-inherit dim link">
             Ajax简介
             </a>
@@ -186,38 +218,18 @@ $('#test'). //找到id为test的元素 .find('.class') //选择test底下类名�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="color-inherit dim link">
-            JQuery设计模式
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          jQuery简介 jQuery是目前使用最广泛的javascript函数库。
-据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
-jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返回这些元素，而是返回一个对象 这个对象称作为jQuery对象，jQuery对象可以操作相应的元素  jQuery部分实现 window.$ = window.jQuery = function(selectorOrArrayOrTemplate){ let elements //element是个DOM数组 if(typeof selectorOrArrayOrTemplate === 'string'){ if(selectorOrArrayOrTemplate[0] === '&lt;'){ // 如果参数是标签字符串就创建DOM对象 elements = [createElement(selectorOrArrayOrTemplate)] }else{ // 如果是选择器就查询 elements = document.querySelectorAll(selectorOrArrayOrTemplate) } }else if(selectorOrArrayOrTemplate instanceof Array){ elements = selectorOrArrayOrTemplate } function createElement(string){ let container = document.createElement('template') container.innerHTML = string.trim() return container.content.firstChild } // 以上是初始化elements的内容 const api = Object.create(jQuery.prototype) Object.assign(api,{ elements:elements, oldApi:selectorOrArrayOrTemplate }) // 创建jQuery对象 return api } $.
-        </div>
-          <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
+              JQuery设计模式
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
@@ -234,12 +246,6 @@ jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="link black dim">
               Js函数的执行时机
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/%E5%86%8D%E8%AE%A8%E8%AE%BAjavascript%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="link black dim">
-              再讨论JavaScript的对象
             </a>
           </h2>
         

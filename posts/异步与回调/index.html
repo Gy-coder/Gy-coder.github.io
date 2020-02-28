@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | 异步与回调</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="异步与回调" />
+<meta property="og:description" content="异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" />
+<meta property="article:published_time" content="2020-02-28T16:12:40+08:00" />
+<meta property="article:modified_time" content="2020-02-28T16:12:40+08:00" />
+<meta itemprop="name" content="异步与回调">
+<meta itemprop="description" content="异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于">
+
+
+<meta itemprop="datePublished" content="2020-02-28T16:12:40&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-28T16:12:40&#43;08:00" />
+<meta itemprop="wordCount" content="98">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="异步与回调"/>
+<meta name="twitter:description" content="异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">异步与回调</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-02-28T16:12:40&#43;08:00">February 28, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="异步与同步">异步与同步</h1>
+
+<ol>
+<li><p>同步的概念</p>
+
+<ul>
+<li>能直接拿到结果称之为同步</li>
+<li>例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长</li>
+<li>总之拿不到结果是不会离开的</li>
+</ul></li>
+
+<li><p>异步的概念</p>
+
+<ul>
+<li>不能直接拿到结果称之为异步</li>
+<li>例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街</li>
+<li>那么什么时候可以吃到饭？</li>
+<li>你可以选择每10分钟去一次饭店(轮询)</li>
+<li>你也可以选择用微信接收通知(回调)</li>
+</ul></li>
+</ol>
+
+<h1 id="从ajax看异步">从ajax看异步</h1>
+
+<ol>
+<li>request.send()之后并不会直接得到response</li>
+<li>必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response</li>
+<li>这个过程和在餐厅等餐的过程是类似的</li>
+</ol>
+
+<h1 id="回调的概念">回调的概念</h1>
+
+<ul>
+<li><p>写了却不调用，给别人调用的函数就是回调</p></li>
+
+<li><p>回调的例子</p>
+
+<ol>
+<li><p>把函数f1给另一个函数f2</p>
+
+<pre><code class="language-JavaScript">function f1(){}
+function f2(fn){
+    fn()
+}
+f2(f1)
+</code></pre>
+
+<p>分析:</p>
+
+<ol>
+<li>Q:我调用f1没有？  A:没有</li>
+<li>Q:我把f1传给别人没有？  A:有，传给了f2</li>
+<li>Q:f2调用f1没有？   A:有调用</li>
+<li>所以，f1是回调</li>
+</ol></li>
+</ol></li>
+</ul>
+
+<h1 id="异步和回调的关系">异步和回调的关系</h1>
+
+<ol>
+<li><p>关联:</p>
+
+<ul>
+<li>异步任务需要在得到结果时通知js拿结果</li>
+<li>可以让js写一个函数地址给浏览器</li>
+<li>异步任务完成时浏览器就可以调用这个函数的地址</li>
+<li>同时把结果作为参数传递给该函数</li>
+<li>这个函数就是写给浏览器调用的，所有称之为回调函数</li>
+</ul></li>
+
+<li><p>区别:</p>
+
+<ul>
+<li>异步函数需要用回调函数来通知结果</li>
+<li>但回调函数不一定只用于异步任务，也可以用于同步任务</li>
+<li><code>arr.forEach(n=&gt;console.log(n))</code>就是一个同步回调</li>
+</ul></li>
+</ol>
+
+<h1 id="如何判断同步异步">如何判断同步异步</h1>
+
+<p>如果一个函数的返回值处于</p>
+
+<ol>
+<li>setTimeout</li>
+<li>AJAX(XMLHTTPRequest)</li>
+<li>AddEventListener</li>
+</ol>
+
+<p>这三个东西内部，那么这个函数就是异步函数</p>
+
+<h1 id="一个例子">一个例子</h1>
+
+<pre><code class="language-JavaScript">function 摇骰子(){
+    setTimeout(()=&gt;{
+        return parseInt(Math.random()*6)+1
+    },1000)
+    // return undefined
+}
+</code></pre>
+
+<p>分析:</p>
+
+<ul>
+<li>摇骰子中没有写return 因此函数的返回值的undefined</li>
+<li>箭头函数中有return 那是函数真正返回的结果</li>
+<li>所以这是一个异步任务</li>
+</ul>
+
+<p>Q:如何拿到这个异步结果?</p>
+
+<p>A:可以用回调。写个函数，然后把函数的地址给它</p>
+
+<pre><code class="language-JavaScript">function f1(x){
+    console.log(x)
+}
+
+function 摇骰子(){
+    setTimeout((fn)=&gt;{
+        fn(parseInt(Math.random()*6)+1)
+    },1000)
+}
+</code></pre>
+
+<p>上述过程可以简化为</p>
+
+<pre><code class="language-JavaScript">摇骰子(x=&gt;console.log(x))
+</code></pre>
+
+<p>还可以简化为</p>
+
+<pre><code class="language-JavaScript">摇骰子(console.log)
+// 如果参数个数不一致就不能这样简化
+</code></pre>
+
+<p>总结:
+1. 异步任务不能直接拿到结果
+2. 于是我们传一个回调给异步任务
+3. 异步任务完成时调用回调
+4. 调用的时候把结果作为参数</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

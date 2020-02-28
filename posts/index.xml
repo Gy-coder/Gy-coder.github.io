@@ -6,10 +6,27 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Wed, 26 Feb 2020 19:35:57 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 16:12:40 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>异步与回调</title>
+      <link>https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/</link>
+      <pubDate>Fri, 28 Feb 2020 16:12:40 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/</guid>
+      <description>异步与同步  同步的概念
+ 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
+ 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
+ 回调的例子
+ 把函数f1给另一个函数f2
+function f1(){} function f2(fn){ fn() } f2(f1)  分析:
+ Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
+ 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
+ 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&amp;gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于</description>
+    </item>
     
     <item>
       <title>Ajax简介</title>
