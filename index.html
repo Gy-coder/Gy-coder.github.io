@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-02-28T21:26:22+08:00" />
+<meta property="og:updated_time" content="2020-03-02T15:34:14+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,47 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="color-inherit dim link">
+            跨域
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          同源策略  什么是源？
+源 = 协议 + 域名 + 端口号
+用window.origin可以获取当前源
+ 如何判断同源？
+如果两个url的
+ 协议 域名 端口号  完全一致，则就是同源
+ 举例
+http://qq.com http://baidu.com  上述两个url不同源
+http://qq.com http://www.qq.com  上述两个url也不同源
+只有两个完全一致的url才能称为同源
+ 同源策略的定义
+ 浏览器规定如果JS运行在源A内，那么就只能获取源A的数据 不能获取源B的数据，即不允许跨域   如何解决跨域问题  CORS
+需要共享数据时，需要提前说明
+在源A的响应头中写源B可以访问
+if(path === './friends.json'){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync('./public/friends.json')); response.end(); }  具体语法可以访问MDN文档
+ JSONP
+ 步骤(b.com访问a.com):
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.
+        </div>
+          <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/promise/" class="color-inherit dim link">
             Promise
             </a>
@@ -175,48 +216,18 @@ function f1(){} function f2(fn){ fn() } f2(f1)  分析:
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="color-inherit dim link">
-            Ajax简介
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
-ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
- 浏览器在window上加了一个XMLHttpRequest函数
- 用这个函数可以构造出一个对象
- JavaScript可以用这个函数来发送请求和接收响应
-  ajax的用法  创建一个XMLHttpRequest对象
-const request = new XMLHttpRequest()  调用这个对象的open方法
-request.open('GET','/style.css')  监听对象的onreadystatechange事件
-request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
-request.send()   关于open  open方法接收两个参数
- 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
-XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
-   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status
-        </div>
-          <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="link black dim">
+              Ajax简介
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="link black dim">
@@ -233,12 +244,6 @@ XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的�
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
               Dom操作简介
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
-              作用域和闭包
             </a>
           </h2>
         

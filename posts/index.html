@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-02-28T21:26:22+08:00" />
+<meta property="og:updated_time" content="2020-03-02T15:34:14+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,38 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="link black dim">
+        跨域
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      同源策略  什么是源？
+源 = 协议 + 域名 + 端口号
+用window.origin可以获取当前源
+ 如何判断同源？
+如果两个url的
+ 协议 域名 端口号  完全一致，则就是同源
+ 举例
+http://qq.com http://baidu.com  上述两个url不同源
+http://qq.com http://www.qq.com  上述两个url也不同源
+只有两个完全一致的url才能称为同源
+ 同源策略的定义
+ 浏览器规定如果JS运行在源A内，那么就只能获取源A的数据 不能获取源B的数据，即不允许跨域   如何解决跨域问题  CORS
+需要共享数据时，需要提前说明
+在源A的响应头中写源B可以访问
+if(path === './friends.json'){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync('./public/friends.json')); response.end(); }  具体语法可以访问MDN文档
+ JSONP
+ 步骤(b.com访问a.com):
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -296,33 +328,6 @@ A:1
       创建一个正方形的小例子 一个正方形有边长，周长，面积，因此我们用一个对象来封装一个正方形
 let Square = { width:5, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } }  利用这个对象，我们可以创建多个正方形，例如
 let square1 = { width:5, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } } let square2 = { width:10, getArea(){ return this.width * this.width }, getLength(){ return this.width * 4 } } let square3 = { width:20, getArea(){ return this.width * this.width }, getLength(){ return this.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" class="link black dim">
-        JavaScript对象的简单介绍
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      对象的写法 对象一共有两种写法，具体写法如下
-let obj = { 'name' : 'kim', 'age' : 100 }  let obj = new Object({'name':'kim','age':100})  关于对象的一些细节
- 键名是字符串，不是标识符，可以包含任何字符 引号可以省略，省略后只能写标识符 就算引号省略，键名也是字符串   对象的属性名和属性值  属性名
-每一个key都是对象的属性名
- 属性值
-每一个value都是对象的属性值
- 一些奇葩的属性名
-let obj = { 1:'a', 3.2:'b', 1e2:true, 1e-2:true, .231:false, 0xff:3 }  在Js中，对象的属性名最后都会被转化为字符串，如上代码的数字会转化成一般的10进制数来显示
-使用Object.keys(obj)方法可以看到对象的所有关键值，例如
-  读取属性  查看对象的所有属性
-Object.keys(obj) //查看自己的所有属性 console.dir(obj) //查看自身与共有的属性  如何判断属性的自己的还是共有的？
-obj.hasOwnProperty('属性名')  原型
- 每个对象都有原型  原型存着对象的共有属性 obj的原型的原型就是对象，obj.proto存着这个对象的地址 这个对象里有toString/constructor/valueOf等属性  对象的原型也是对象  对象的原型也有原型 obj = {}的原型为所有对象的原型，这个原型包含所有对象的共有属性，是对象的根 这个根也有原型，是null     查看属性
     </div>
   </div>
 </div>

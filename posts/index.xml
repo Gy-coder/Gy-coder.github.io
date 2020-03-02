@@ -6,10 +6,36 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 28 Feb 2020 21:26:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 15:34:14 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>跨域</title>
+      <link>https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/</link>
+      <pubDate>Mon, 02 Mar 2020 15:34:14 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/</guid>
+      <description>同源策略  什么是源？
+源 = 协议 + 域名 + 端口号
+用window.origin可以获取当前源
+ 如何判断同源？
+如果两个url的
+ 协议 域名 端口号  完全一致，则就是同源
+ 举例
+http://qq.com http://baidu.com  上述两个url不同源
+http://qq.com http://www.qq.com  上述两个url也不同源
+只有两个完全一致的url才能称为同源
+ 同源策略的定义
+ 浏览器规定如果JS运行在源A内，那么就只能获取源A的数据 不能获取源B的数据，即不允许跨域   如何解决跨域问题  CORS
+需要共享数据时，需要提前说明
+在源A的响应头中写源B可以访问
+if(path === &#39;./friends.json&#39;){ response.statusCode = 200; response.setHeader(&amp;quot;Content-Type&amp;quot;, &amp;quot;text/json;charset=utf-8&amp;quot;); response.setHeader(&amp;quot;Access-Control-Allow-Origin&amp;quot;, &amp;quot;http://frank.com:9999&amp;quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync(&#39;./public/friends.json&#39;)); response.end(); }  具体语法可以访问MDN文档
+ JSONP
+ 步骤(b.com访问a.com):
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.</description>
+    </item>
     
     <item>
       <title>Promise</title>
