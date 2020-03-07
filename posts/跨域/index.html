@@ -43,7 +43,7 @@ http://qq.com http://www.qq.com  上述两个url也不同源
 if(path === &#39;./friends.json&#39;){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync(&#39;./public/friends.json&#39;)); response.end(); }  具体语法可以访问MDN文档
  JSONP
  步骤(b.com访问a.com):
- a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window." />
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中事先定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" />
 <meta property="article:published_time" content="2020-03-02T15:34:14+08:00" />
@@ -66,7 +66,7 @@ http://qq.com http://www.qq.com  上述两个url也不同源
 if(path === &#39;./friends.json&#39;){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync(&#39;./public/friends.json&#39;)); response.end(); }  具体语法可以访问MDN文档
  JSONP
  步骤(b.com访问a.com):
- a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.">
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中事先定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.">
 
 
 <meta itemprop="datePublished" content="2020-03-02T15:34:14&#43;08:00" />
@@ -95,7 +95,7 @@ http://qq.com http://www.qq.com  上述两个url也不同源
 if(path === &#39;./friends.json&#39;){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync(&#39;./public/friends.json&#39;)); response.end(); }  具体语法可以访问MDN文档
  JSONP
  步骤(b.com访问a.com):
- a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中实现定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window."/>
+ a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中事先定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window."/>
 
   </head>
 
@@ -231,7 +231,7 @@ http://www.qq.com
 <ul>
 <li>a.com将数据写到a.js中</li>
 <li>b.com用script标签引用a.js</li>
-<li>在b.com中实现定义好window.xxx函数</li>
+<li>在b.com中事先定义好window.xxx函数</li>
 <li>a.js执行window.xxx函数</li>
 <li>然后b.com就通过window.xxx访问到a.com的数据了</li>
 <li>window.xxx就是一个回调</li>
