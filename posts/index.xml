@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Mon, 02 Mar 2020 15:34:14 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 14:50:12 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MVC</title>
+      <link>https://gy-coder.xyz/posts/mvc/</link>
+      <pubDate>Sun, 12 Apr 2020 14:50:12 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/mvc/</guid>
+      <description>什么是MVC？  每个模块都可以写成三个对象 M + V + C
+ M为Model，数据模型，用于操作所有的数据 V为View，视图模型，负责所有的UI界面 C为Control，控制器，负责其他的内容   下面是MVC的代码示例
+const m = { data : { n = parseInt(localStorage.getItem(&#39;x&#39;)) || 100 }, create(){ //增 }, delete(){ //删 }, update(){ //改 }, get(){ //查 } }  const v = { el:null, html(){ //返回html字符串 }, init(){ //初始化方法 }, render(){ //渲染html的方法 } }  const c = { init(){ //c的初始化方法 }, event:{ //事件字符串 &#39;click .add&#39;:&#39;add&#39;, }, add(){ //事件函数 }, autoBindEvent(){ //事件绑定函数 } }   eventBus  eventBus主要有on trigger off方法</description>
+    </item>
     
     <item>
       <title>跨域</title>

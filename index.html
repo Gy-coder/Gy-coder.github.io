@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-03-02T15:34:14+08:00" />
+<meta property="og:updated_time" content="2020-04-12T14:50:12+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,32 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/mvc/" class="color-inherit dim link">
+            MVC
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          什么是MVC？  每个模块都可以写成三个对象 M + V + C
+ M为Model，数据模型，用于操作所有的数据 V为View，视图模型，负责所有的UI界面 C为Control，控制器，负责其他的内容   下面是MVC的代码示例
+const m = { data : { n = parseInt(localStorage.getItem('x')) || 100 }, create(){ //增 }, delete(){ //删 }, update(){ //改 }, get(){ //查 } }  const v = { el:null, html(){ //返回html字符串 }, init(){ //初始化方法 }, render(){ //渲染html的方法 } }  const c = { init(){ //c的初始化方法 }, event:{ //事件字符串 'click .add':'add', }, add(){ //事件函数 }, autoBindEvent(){ //事件绑定函数 } }   eventBus  eventBus主要有on trigger off方法
+        </div>
+          <a href="https://gy-coder.xyz/posts/mvc/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="color-inherit dim link">
             跨域
             </a>
@@ -184,44 +210,18 @@ ajax = (method,url,options)=&gt;{ const {success,fail} = options const request =
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="color-inherit dim link">
-            异步与回调
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          异步与同步  同步的概念
- 能直接拿到结果称之为同步 例如在医院挂号，直到拿到号才会离开，这个过程可能时间很短，也可能时间很长 总之拿不到结果是不会离开的  异步的概念
- 不能直接拿到结果称之为异步 例如在餐厅门口等待位置，你可以选择继续等，但是也可以选择先去逛街 那么什么时候可以吃到饭？ 你可以选择每10分钟去一次饭店(轮询) 你也可以选择用微信接收通知(回调)   从ajax看异步  request.send()之后并不会直接得到response 必须等到request.readystate === 4 后，浏览器调用onreadystatechange函数才能得到response 这个过程和在餐厅等餐的过程是类似的  回调的概念  写了却不调用，给别人调用的函数就是回调
- 回调的例子
- 把函数f1给另一个函数f2
-function f1(){} function f2(fn){ fn() } f2(f1)  分析:
- Q:我调用f1没有？ A:没有 Q:我把f1传给别人没有？ A:有，传给了f2 Q:f2调用f1没有？ A:有调用 所以，f1是回调    异步和回调的关系  关联:
- 异步任务需要在得到结果时通知js拿结果 可以让js写一个函数地址给浏览器 异步任务完成时浏览器就可以调用这个函数的地址 同时把结果作为参数传递给该函数 这个函数就是写给浏览器调用的，所有称之为回调函数  区别:
- 异步函数需要用回调函数来通知结果 但回调函数不一定只用于异步任务，也可以用于同步任务 arr.forEach(n=&gt;console.log(n))就是一个同步回调   如何判断同步异步 如果一个函数的返回值处于
-        </div>
-          <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="link black dim">
+              异步与回调
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="link black dim">
@@ -238,12 +238,6 @@ function f1(){} function f2(fn){ fn() } f2(f1)  分析:
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
               JQuery设计模式
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
-              Dom操作简介
             </a>
           </h2>
         
