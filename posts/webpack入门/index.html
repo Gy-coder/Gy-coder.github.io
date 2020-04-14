@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Webpack入门</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Webpack入门" />
+<meta property="og:description" content="什么是webpack？  本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。  开始使用webpack webpack的安装分全局安装和本地安装
+ 本地安装
+mkdir webpack-demo cd webpack-demo npm init -y npm install webpack webpack-cli --save-dev  全局安装
+# 配置configuration 1. 现在package.json中的script内加入以下代码  &ldquo;build&rdquo;: &ldquo;rm -rf dist &amp;&amp; webpack&rdquo;,```
+用途:每次都可以通过yarn build来打包
+但是运行webpack时会出现如下警告
+ 创建一个webpack.config.js
+然后在webpack.config.js内写入以下代码
+const path = require(&#39;path&#39;); module.exports = { mode: &quot;production&quot;, }   其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;
+ production是以生产模式打包，所生成的js代码无注释
+ development是以开发模式打包，所生成的js代码有注释
+   创建entry和output" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" />
+<meta property="article:published_time" content="2020-04-14T08:16:21+08:00" />
+<meta property="article:modified_time" content="2020-04-14T08:16:21+08:00" />
+<meta itemprop="name" content="Webpack入门">
+<meta itemprop="description" content="什么是webpack？  本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。  开始使用webpack webpack的安装分全局安装和本地安装
+ 本地安装
+mkdir webpack-demo cd webpack-demo npm init -y npm install webpack webpack-cli --save-dev  全局安装
+# 配置configuration 1. 现在package.json中的script内加入以下代码  &ldquo;build&rdquo;: &ldquo;rm -rf dist &amp;&amp; webpack&rdquo;,```
+用途:每次都可以通过yarn build来打包
+但是运行webpack时会出现如下警告
+ 创建一个webpack.config.js
+然后在webpack.config.js内写入以下代码
+const path = require(&#39;path&#39;); module.exports = { mode: &quot;production&quot;, }   其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;
+ production是以生产模式打包，所生成的js代码无注释
+ development是以开发模式打包，所生成的js代码有注释
+   创建entry和output">
+
+
+<meta itemprop="datePublished" content="2020-04-14T08:16:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-14T08:16:21&#43;08:00" />
+<meta itemprop="wordCount" content="261">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Webpack入门"/>
+<meta name="twitter:description" content="什么是webpack？  本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。  开始使用webpack webpack的安装分全局安装和本地安装
+ 本地安装
+mkdir webpack-demo cd webpack-demo npm init -y npm install webpack webpack-cli --save-dev  全局安装
+# 配置configuration 1. 现在package.json中的script内加入以下代码  &ldquo;build&rdquo;: &ldquo;rm -rf dist &amp;&amp; webpack&rdquo;,```
+用途:每次都可以通过yarn build来打包
+但是运行webpack时会出现如下警告
+ 创建一个webpack.config.js
+然后在webpack.config.js内写入以下代码
+const path = require(&#39;path&#39;); module.exports = { mode: &quot;production&quot;, }   其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;
+ production是以生产模式打包，所生成的js代码无注释
+ development是以开发模式打包，所生成的js代码有注释
+   创建entry和output"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Webpack入门</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-04-14T08:16:21&#43;08:00">April 14, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="什么是webpack">什么是webpack？</h1>
+
+<ul>
+<li>本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。</li>
+</ul>
+
+<h1 id="开始使用webpack">开始使用webpack</h1>
+
+<p>webpack的安装分全局安装和本地安装</p>
+
+<ol>
+<li><p>本地安装</p>
+
+<pre><code>mkdir webpack-demo
+cd webpack-demo
+npm init -y
+npm install webpack webpack-cli --save-dev
+</code></pre></li>
+
+<li><p>全局安装</p>
+
+<pre><code class="language-npm">
+
+# 配置configuration
+
+1. 现在package.json中的script内加入以下代码
+
+</code></pre>
+
+<p>&ldquo;build&rdquo;: &ldquo;rm -rf dist &amp;&amp; webpack&rdquo;,```</p>
+
+<p>用途:每次都可以通过<code>yarn build</code>来打包</p>
+
+<p>但是运行webpack时会出现如下警告</p>
+
+<p><img src="../../images/33.png" alt="" /></p></li>
+
+<li><p>创建一个webpack.config.js</p>
+
+<p>然后在webpack.config.js内写入以下代码</p>
+
+<pre><code class="language-javascript">   const path = require('path');
+   module.exports = {
+     mode: &quot;production&quot;, 
+   }
+</code></pre></li>
+</ol>
+
+<p>其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;</p>
+
+<ul>
+<li><p>production是以生产模式打包，所生成的js代码无注释</p></li>
+
+<li><p>development是以开发模式打包，所生成的js代码有注释</p></li>
+</ul>
+
+<ol>
+<li><p>创建entry和output</p>
+
+<pre><code class="language-javascript">  const path = require('path');
+  module.exports = {
+    entry: './src/index.js',
+    output: {
+      filename: 'main.[contenthash].js',
+      path: path.resolve(__dirname, 'dist')
+    }
+  };
+</code></pre></li>
+</ol>
+
+<p>其中entry是用于以属性内路径的文件来打包js文件</p>
+
+<p>output是指输出的文件</p>
+
+<ul>
+<li><p>filename是打包后的文件名字，其中的[contenthash]是为文件名后产生一个哈希值，在文件更新之后，这个哈希会变换，用于Http缓存，在本例中的文件名应该类似与main.da5570c26dca03d185a0.js</p></li>
+
+<li><p>path是输出文件的路径</p></li>
+</ul>
+
+<h1 id="用webpack生成html">用webpack生成HTML</h1>
+
+<ol>
+<li><p>安装</p>
+
+<pre><code class="language-npm">    
+2. 使用方法
+
+</code></pre>
+
+<p>javascript
+   const HtmlWebpackPlugin = require(&lsquo;html-webpack-plugin&rsquo;);
+   const path = require(&lsquo;path&rsquo;);</p>
+
+<p>module.exports = {
+     entry: &lsquo;index.js&rsquo;,
+     output: {
+       path: path.resolve(__dirname, &lsquo;./dist&rsquo;),
+       filename: &lsquo;main.[contenthash].js&rsquo;
+     },
+     plugins: [new HtmlWebpackPlugin()]
+   };</p>
+
+<pre><code>   
+在webpack.config.js中写入以上代码后，运行yarn build可以得到名为index.html的文件，内容如下
+   
+</code></pre>
+
+<p>html
+  &lt;!DOCTYPE html&gt;
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+    <body>
+       <script src="main.da5570c26dca03d185a0.js"></script>
+    </body>
+  </html></p>
+
+<pre><code>   
+3. 如何更改html的名字以及内容？
+
+在webpack.config.js中写入以下代码
+
+</code></pre>
+
+<p>javascript
+   plugins: [
+     new HtmlWebpackPlugin({
+       title: &lsquo;Custom template&rsquo;,
+       // Load a custom template (lodash by default)
+       template: &lsquo;src/index.html&rsquo;
+     })
+   ]</p>
+
+<pre><code>    
+在src/index.html中写入
+    
+</code></pre>
+
+<p>html
+   &lt;!DOCTYPE html&gt;
+   <html>
+     <head>
+       <meta charset="utf-8"/>
+       <title>&lt;%= htmlWebpackPlugin.options.title %&gt;</title>
+     </head>
+     <body>
+       <div class="app">
+           <p>great</p>
+       </div>
+     </body>
+   </html></p>
+
+<pre><code>   
+再次运行yarn build可以得到名为Custom template的html文件 其内容为src/index.html的内容
+   
+   
+# 使用CSS
+ 
+1. 安装
+ 
+</code></pre>
+
+<p>npm install &ndash;save-dev css-loader
+ npm install &ndash;save-dev style-loader</p>
+
+<pre><code>    
+2. 如何使用？
+
+在index.js中写入```import css from 'file.css';```
+   
+然后再webpack.config.js中写入以下代码
+   
+</code></pre>
+
+<p>javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /.css$/i,
+        use: [&lsquo;style-loader&rsquo;, &lsquo;css-loader&rsquo;],
+      },
+    ],
+  },
+};</p>
+
+<pre><code>   
+   
+# 使用webpack dev server
+
+1. 安装
+
+</code></pre>
+
+<p>npm install &ndash;save-dev webpack-dev-server```</p></li>
+
+<li><p>如何使用？</p>
+
+<p>在webpack.config.js中的module.export内写入以下代码</p>
+
+<pre><code class="language-javascript">   devtool: 'inline-source-map',
+   devServer: {
+        contentBase: './dist',
+   },
+</code></pre></li>
+</ol>
+
+<p>然后在package.json中添加命令</p>
+
+<pre><code class="language-&quot;start&quot;:">   
+   执行yarn start既可以执行webpack server
+   
+# webpack CSS抽成文件
+
+1. 安装
+
+    ```npm install --save-dev mini-css-extract-plugin```
+    
+2. 使用
+
+    在webpack.json里写入以下代码
+    
+    ````javascript
+       module: {
+           rules: [
+             {
+               test: /\.css$/,
+               use: [
+                 {
+                   loader: MiniCssExtractPlugin.loader,
+                   options: {
+                     publicPath: '/public/path/to/',
+                   },
+                 },
+                 'css-loader',
+               ],
+             },
+           ],
+         },
+    ````
+   
+</code></pre>
+
+<p>javascript
+       plugins: [
+           new MiniCssExtractPlugin({
+               filename: &lsquo;[name].[contenthash].css&rsquo;,
+               chunkFilename: &lsquo;[id].[contenthash].css&rsquo;,
+           }),
+       ],
+   ```</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

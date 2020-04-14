@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-04-12T14:50:12+08:00" />
+<meta property="og:updated_time" content="2020-04-14T08:16:21+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,41 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
+            Webpack入门
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          什么是webpack？  本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。  开始使用webpack webpack的安装分全局安装和本地安装
+ 本地安装
+mkdir webpack-demo cd webpack-demo npm init -y npm install webpack webpack-cli --save-dev  全局安装
+# 配置configuration 1. 现在package.json中的script内加入以下代码  &ldquo;build&rdquo;: &ldquo;rm -rf dist &amp;&amp; webpack&rdquo;,```
+用途:每次都可以通过yarn build来打包
+但是运行webpack时会出现如下警告
+ 创建一个webpack.config.js
+然后在webpack.config.js内写入以下代码
+const path = require('path'); module.exports = { mode: &quot;production&quot;, }   其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;
+ production是以生产模式打包，所生成的js代码无注释
+ development是以开发模式打包，所生成的js代码有注释
+   创建entry和output
+        </div>
+          <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/mvc/" class="color-inherit dim link">
             MVC
             </a>
@@ -181,41 +216,18 @@ if(path === './friends.json'){ response.statusCode = 200; response.setHeader(&qu
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/promise/" class="color-inherit dim link">
-            Promise
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          一些问题  如果异步任务有两个结果，成功或者失败。怎么办？
-方法一:回调接受两个参数
-fs.readFile('/1.txt',(error,data)=&gt;{ if(error){console.log(&quot;加载失败&quot;),return } console.log(data.toString()) //成功 })  方法二:搞两个回调
-ajax('get','/1.txt',data=&gt;{},error=&gt;{}) //前面是请求成功的回调，后面是请求失败的回调  ajax('get','/1.txt',{ success:()=&gt;{}, fail:()=&gt;{} }) //接受一个对象，有两个属性，分别表示成功和失败  这些方法的不足
- 不规范，名称五花八门 容易出现回调地狱，使代码可读性变差 很难进行错误处理   promise 解决这些不足的方法  以ajax的封装为例，解释promise的封装
-ajax = (method,url,options)=&gt;{ const {success,fail} = options const request = new XMLHttpRequest() request.open(method,url) request.onreadystatechange = ()=&gt;{ if(request.readystate === 4){ if(request.status &lt; 400){ success.call(null,request.response) }else if(request.status &gt;=400){ fail.call(null,request,stauts) } } } request.send() } ajax('GET','/1.txt',{ success(response){}, fail:(request,request.status)=&gt;{} })  promise的封装和调用
-        </div>
-          <a href="https://gy-coder.xyz/posts/promise/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/promise/" class="link black dim">
+              Promise
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="link black dim">
@@ -232,12 +244,6 @@ ajax = (method,url,options)=&gt;{ const {success,fail} = options const request =
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="link black dim">
               JQuery小结
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
-              JQuery设计模式
             </a>
           </h2>
         
