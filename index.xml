@@ -25,7 +25,8 @@ npm install --global webpack   配置configuration  现在package.json中的scri
 但是运行webpack时会出现如下警告
  创建一个webpack.config.js
 然后在webpack.config.js内写入以下代码
-const path = require(&#39;path&#39;); module.exports = { mode: &amp;quot;production&amp;quot;, }   其中mode内可以填入 &amp;ldquo;production&amp;rdquo; 或 &amp;ldquo;development&amp;rdquo;</description>
+const path = require(&#39;path&#39;); module.exports = { mode: &amp;quot;production&amp;quot;, }  其中mode内可以填入 &amp;ldquo;production&amp;rdquo; 或 &amp;ldquo;development&amp;rdquo;
+ production是以生产模式打包，所生成的js代码无注释</description>
     </item>
     
     <item>
