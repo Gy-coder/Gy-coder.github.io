@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Vue入门</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Vue入门" />
+<meta property="og:description" content="@vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" />
+<meta property="article:published_time" content="2020-04-30T14:29:07+08:00" />
+<meta property="article:modified_time" content="2020-04-30T14:29:07+08:00" />
+<meta itemprop="name" content="Vue入门">
+<meta itemprop="description" content="@vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件">
+
+
+<meta itemprop="datePublished" content="2020-04-30T14:29:07&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-30T14:29:07&#43;08:00" />
+<meta itemprop="wordCount" content="72">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue入门"/>
+<meta name="twitter:description" content="@vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Vue入门</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-04-30T14:29:07&#43;08:00">April 30, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="vue-cli">@vue/cli</h1>
+
+<ol>
+<li><p>安装</p>
+
+<pre><code>npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+</code></pre>
+
+<p>查看Vue的版本</p>
+
+<pre><code>vue -V
+</code></pre></li>
+
+<li><p>用@vue/cli创建一个项目</p>
+
+<pre><code>vue create vue-demo
+</code></pre>
+
+<p>在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择</p>
+
+<p><img src="../../images/34.png" alt="" /></p></li>
+</ol>
+
+<h1 id="vue的两个版本的区别">vue的两个版本的区别</h1>
+
+<p>vue有完整版和只包含运行时版</p>
+
+<ol>
+<li><p>完整版     vue.js</p></li>
+
+<li><p>只包含运行时版   vue.runtime.js  单</p></li>
+</ol>
+
+<p>两个版本的区别如下:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">完整版</th>
+<th align="center">只包含运行时版</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">特点</td>
+<td align="center">有编译器</td>
+<td align="center">没有编译器</td>
+</tr>
+
+<tr>
+<td align="center">视图</td>
+<td align="center">写入HTML或写入template完成</td>
+<td align="center">通过render函数的h方法</td>
+</tr>
+
+<tr>
+<td align="center">cdn引入</td>
+<td align="center">vue.js</td>
+<td align="center">vue.runtime.js</td>
+</tr>
+
+<tr>
+<td align="center">webpack引入</td>
+<td align="center">需要配置alias</td>
+<td align="center">默认使用此版</td>
+</tr>
+
+<tr>
+<td align="center">@vue/cil引入</td>
+<td align="center">需要额外配置</td>
+<td align="center">默认使用此版</td>
+</tr>
+</tbody>
+</table>
+
+<p>最佳方式:总是使用非完整版，然后配合vue-loader和vue文件</p>
+
+<p>思路:</p>
+
+<ol>
+<li>保证用户体验，用户下载的js文件可以更小，但只支持h函数</li>
+<li>保证开发体验，开发者可以直接在Vue文件里写HTML标签，而不写h函数</li>
+<li>工作让loader做，vue-loader把vue文件里的HTML转为h函数
+<br />
+<br /></li>
+</ol>
+
+<h1 id="vue的三个实例">vue的三个实例</h1>
+
+<ol>
+<li><p>完整版</p>
+
+<pre><code class="language-vue">new Vue({
+   el:'#app',
+   template:'&lt;div&gt;{{n}}&lt;/div&gt;                
+})
+</code></pre></li>
+
+<li><p>只包含运行时版</p>
+
+<pre><code class="language-vue"> new Vue({
+   el:'#app',
+   render(h){
+     return h('div','apple')
+   }                        
+})
+</code></pre></li>
+</ol>
+
+<h1 id="使用codesandbox">使用codesandbox</h1>
+
+<p>网址:<a href="codesandbox.io">codesandbox.io</a></p>
+
+<p>使用方法</p>
+
+<ol>
+<li><p>打开codesandbox</p>
+
+<p><img src="../../images/35.png" alt="" /></p></li>
+
+<li><p>选择vue</p>
+
+<p><img src="../../images/36.png" alt="" /></p></li>
+
+<li><p>开始写代码(默认只包含运行时版)</p>
+
+<p><img src="../../images/37.png" alt="" /></p></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

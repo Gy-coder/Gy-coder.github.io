@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-04-14T08:16:21+08:00" />
+<meta property="og:updated_time" content="2020-04-30T14:29:07+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,38 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
+            Vue入门
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          @vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件
+        </div>
+          <a href="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
             Webpack入门
             </a>
@@ -173,53 +205,18 @@ const m = { data : { n = parseInt(localStorage.getItem('x')) || 100 }, create(){
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="color-inherit dim link">
-            跨域
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          同源策略  什么是源？
-源 = 协议 + 域名 + 端口号
-用window.origin可以获取当前源
- 如何判断同源？
-如果两个url的
- 协议 域名 端口号  完全一致，则就是同源
- 举例
-http://qq.com http://baidu.com  上述两个url不同源
-http://qq.com http://www.qq.com  上述两个url也不同源
-只有两个完全一致的url才能称为同源
- 同源策略的定义
- 浏览器规定如果JS运行在源A内，那么就只能获取源A的数据 不能获取源B的数据，即不允许跨域   如何解决跨域问题  CORS
-需要共享数据时，需要提前说明
-在源A的响应头中写源B可以访问
-if(path === './friends.json'){ response.statusCode = 200; response.setHeader(&quot;Content-Type&quot;, &quot;text/json;charset=utf-8&quot;); response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;http://frank.com:9999&quot;) //Access-Control-Allow-Origin这行就是CORS response.write(fs.readFileSync('./public/friends.json')); response.end(); }  具体语法可以访问MDN文档
- JSONP
- 步骤(b.com访问a.com):
- a.com将数据写到a.js中 b.com用script标签引用a.js 在b.com中事先定义好window.xxx函数 a.js执行window.xxx函数 然后b.com就通过window.xxx访问到a.com的数据了 window.
-        </div>
-          <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="link black dim">
+              跨域
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/promise/" class="link black dim">
@@ -236,12 +233,6 @@ if(path === './friends.json'){ response.statusCode = 200; response.setHeader(&qu
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="link black dim">
               Ajax简介
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/jquery%E5%B0%8F%E7%BB%93/" class="link black dim">
-              JQuery小结
             </a>
           </h2>
         

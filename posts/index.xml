@@ -6,10 +6,27 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Tue, 14 Apr 2020 08:16:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 14:29:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue入门</title>
+      <link>https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 30 Apr 2020 14:29:07 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/</guid>
+      <description>@vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件</description>
+    </item>
     
     <item>
       <title>Webpack入门</title>

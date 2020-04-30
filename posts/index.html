@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-04-14T08:16:21+08:00" />
+<meta property="og:updated_time" content="2020-04-30T14:29:07+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,29 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" class="link black dim">
+        Vue入门
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      @vue/cli  安装
+npm install -g @vue/cli # OR yarn global add @vue/cli  查看Vue的版本
+vue -V  用@vue/cli创建一个项目
+vue create vue-demo  在vue项目创建之后，系统会要求用户配置项目，你可以通过默认的present，也可以手动选择
+  vue的两个版本的区别 vue有完整版和只包含运行时版
+ 完整版 vue.js
+ 只包含运行时版 vue.runtime.js 单
+  两个版本的区别如下:
+    完整版 只包含运行时版     特点 有编译器 没有编译器   视图 写入HTML或写入template完成 通过render函数的h方法   cdn引入 vue.js vue.runtime.js   webpack引入 需要配置alias 默认使用此版   @vue/cil引入 需要额外配置 默认使用此版    最佳方式:总是使用非完整版，然后配合vue-loader和vue文件
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -303,32 +326,6 @@ window  获取所有元素
 document.all  document.all是继五大falsy值之后的第6个falsy值
   节点的增删改查 节点的创建  创建标签节点
 let div = document.createElement('div') document.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85/" class="link black dim">
-        作用域和闭包
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      作用域 { let a = 1 }  如上述代码所示，一个{}就代表了一个作用域，a变量只能在作用域内访问到
-每一个函数都能够创建一个作用域
-例如:
-function f1(){ let a = 1 } console.log(a) //Uncaught ReferenceError: a is not defined  Q:上述代码中a不存在的原因是否是f1没有执行？
-A:即使函数f1执行，a一样不存在
-function f1(){ let a = 1 } f1() console.log(a)  Q:打印出多少？
-A:a还是不存在，因为无法访问到作用域内的a
-全局变量和局部变量  全局变量
- 在顶级作用域中声明的变量成为全局变量 在window属性内的都是全局变量  局部变量
- 其他都是局部变量    作用域规则  如果有多个作用域中存在同一个变量a
- 查找a的声明时，就向上取最近的作用域 查找a的过程与函数的执行无关 但a的值与函数的执行有关  例如
-function f1(){ //1.定义f1 let a = 1 //3.
     </div>
   </div>
 </div>
