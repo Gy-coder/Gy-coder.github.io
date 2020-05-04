@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-04-30T14:29:07+08:00" />
+<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,32 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="link black dim">
+        Vue基本属性
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Vue的基本属性  el&ndash;挂载点
+可以用$mount代替
+ data&ndash;内部数据
+支持对象和函数，但是优先使用函数
+ methods&ndash;方法
+事件处理函数或者是普通函数
+ components&ndash;组件
+组件有三种写法
+ 四个生命周期钩子
+ created &ndash;实例出现在内存中调用 mounted &ndash;实例出现在页面中调用 updated &ndash;实例更新时调用 destroyed &ndash;实例在内存中消亡时调用   prop &ndash;外部数据
+ message = &ldquo;n&rdquo; &ndash;传入字符串 :message = &ldquo;n&rdquo; &ndash;传入this.n数据 :fn = &ldquo;add&rdquo; &ndash; 传入this.add函数    挂载点用法  挂载点可以用el实现，也可以用$mount实现
+import App from './App.vue' new Vue({ el: &quot;#app&quot;, render: h =&gt; h(App) });  import App from './App.vue' new Vue({ render: h =&gt; h(App) }).
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -297,35 +323,6 @@ $('#test'). //找到id为test的元素 .find('.class') //选择test底下类名�
       jQuery简介 jQuery是目前使用最广泛的javascript函数库。
 据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
 jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返回这些元素，而是返回一个对象 这个对象称作为jQuery对象，jQuery对象可以操作相应的元素  jQuery部分实现 window.$ = window.jQuery = function(selectorOrArrayOrTemplate){ let elements //element是个DOM数组 if(typeof selectorOrArrayOrTemplate === 'string'){ if(selectorOrArrayOrTemplate[0] === '&lt;'){ // 如果参数是标签字符串就创建DOM对象 elements = [createElement(selectorOrArrayOrTemplate)] }else{ // 如果是选择器就查询 elements = document.querySelectorAll(selectorOrArrayOrTemplate) } }else if(selectorOrArrayOrTemplate instanceof Array){ elements = selectorOrArrayOrTemplate } function createElement(string){ let container = document.createElement('template') container.innerHTML = string.trim() return container.content.firstChild } // 以上是初始化elements的内容 const api = Object.create(jQuery.prototype) Object.assign(api,{ elements:elements, oldApi:selectorOrArrayOrTemplate }) // 创建jQuery对象 return api } $.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
-        Dom操作简介
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      DOM简介 Document Object Model (DOM) 为文档对象模型， 它使用对象的表示方式来表示对应的文档结构及其中的内容。
-DOM的结构可以表示成树形结构
-通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。 浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
-如何用JavaScript获取HTML中的节点  通过标签的一些属性来获取
-document.getElementById('id') document.getElementsByclassName('class')[0] document.getElementsByTagName('div')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定  通过CSS选择器来获取
-document.querySelector('#id') document.querySelectorAll('.class')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定   这么多方法我该如何选择？
-如果不需要兼容IE直接使用2中的方法，要兼容IE就选择1中的方法
-用JavaScript获取特定元素  获取HTML元素
-document.documentElement  获取head元素
-document.head  获取body元素
-document.body  获取窗口(窗口不是元素)
-window  获取所有元素
-document.all  document.all是继五大falsy值之后的第6个falsy值
-  节点的增删改查 节点的创建  创建标签节点
-let div = document.createElement('div') document.
     </div>
   </div>
 </div>

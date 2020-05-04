@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-04-30T14:29:07+08:00" />
+<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,35 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/dom%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="link black dim">
+        Dom操作简介
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      DOM简介 Document Object Model (DOM) 为文档对象模型， 它使用对象的表示方式来表示对应的文档结构及其中的内容。
+DOM的结构可以表示成树形结构
+通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。 浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
+如何用JavaScript获取HTML中的节点  通过标签的一些属性来获取
+document.getElementById('id') document.getElementsByclassName('class')[0] document.getElementsByTagName('div')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定  通过CSS选择器来获取
+document.querySelector('#id') document.querySelectorAll('.class')[0] //获取多个节点时 所返回的是伪数组，因此要得到真正的节点需要具体指定   这么多方法我该如何选择？
+如果不需要兼容IE直接使用2中的方法，要兼容IE就选择1中的方法
+用JavaScript获取特定元素  获取HTML元素
+document.documentElement  获取head元素
+document.head  获取body元素
+document.body  获取窗口(窗口不是元素)
+window  获取所有元素
+document.all  document.all是继五大falsy值之后的第6个falsy值
+  节点的增删改查 节点的创建  创建标签节点
+let div = document.createElement('div') document.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -293,30 +322,6 @@ url一般由协议 + 域名 + 路径 + 查询参数 + 锚点组成
    CSS 动画优化 CSS 动画优化的方式有很多，本文主要讲解两个方面，如果您想了解完全可以参考该链接
  Js 优化:
 使用 requestAnimationFrame 代替 SetInterVal 和 setTimeOut
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/css%E4%B9%8Bgrid%E5%B8%83%E5%B1%80/" class="link black dim">
-        CSS之grid布局
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      grid 布局简介 grid 布局是 CSS 一种功能强大的布局方案，常用于二维布局
-grid 的布局结构 和 flex 布局一样，grid 布局也分为容器部分(container)和容器内元素部分(items)
-如何使用 grid 布局？ 使用 grid 布局比较简单，只需要在 CSS 中声明容器是 grid 容器就可以使用 grid 布局
-&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;  .container{ display:grid/inline-grid; }  划分 grid 容器 grid-template-rows 属性用于划分网格行
-grid-template-columns 属性用于划分网格列
-属性的取值可以是非负数长度，可以是百分数，也可以是 fr
-fr 是将空间按照份数成比例划分
-.container{ grid-template-rows:25% 100px auto; grid-template-columns:40px 50px auto 50px 40px; }  如何为 items 选定范围？ 只需要确定构成 item 范围的四根线则可以确定 item 的范围，通过以下四个属性则可以确定
- grid-column-start grid-column-end grid-row-start grid-row-end
-.items:nth-child(x){ grid-column-start:2; grid-column-end:5; grid-row-start:1; grid-row-end:3; }   划分例子 &lt;div class=&quot;container&quot;&gt; &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; &lt;/div&gt;  .
     </div>
   </div>
 </div>

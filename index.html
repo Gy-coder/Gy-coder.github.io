@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-04-30T14:29:07+08:00" />
+<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,41 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="color-inherit dim link">
+            Vue基本属性
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Vue的基本属性  el&ndash;挂载点
+可以用$mount代替
+ data&ndash;内部数据
+支持对象和函数，但是优先使用函数
+ methods&ndash;方法
+事件处理函数或者是普通函数
+ components&ndash;组件
+组件有三种写法
+ 四个生命周期钩子
+ created &ndash;实例出现在内存中调用 mounted &ndash;实例出现在页面中调用 updated &ndash;实例更新时调用 destroyed &ndash;实例在内存中消亡时调用   prop &ndash;外部数据
+ message = &ldquo;n&rdquo; &ndash;传入字符串 :message = &ldquo;n&rdquo; &ndash;传入this.n数据 :fn = &ldquo;add&rdquo; &ndash; 传入this.add函数    挂载点用法  挂载点可以用el实现，也可以用$mount实现
+import App from './App.vue' new Vue({ el: &quot;#app&quot;, render: h =&gt; h(App) });  import App from './App.vue' new Vue({ render: h =&gt; h(App) }).
+        </div>
+          <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
             Vue入门
             </a>
@@ -179,38 +214,18 @@ const path = require('path'); module.exports = { mode: &quot;production&quot;, }
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/mvc/" class="color-inherit dim link">
-            MVC
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          什么是MVC？  每个模块都可以写成三个对象 M + V + C
- M为Model，数据模型，用于操作所有的数据 V为View，视图模型，负责所有的UI界面 C为Control，控制器，负责其他的内容   下面是MVC的代码示例
-const m = { data : { n = parseInt(localStorage.getItem('x')) || 100 }, create(){ //增 }, delete(){ //删 }, update(){ //改 }, get(){ //查 } }  const v = { el:null, html(){ //返回html字符串 }, init(){ //初始化方法 }, render(){ //渲染html的方法 } }  const c = { init(){ //c的初始化方法 }, event:{ //事件字符串 'click .add':'add', }, add(){ //事件函数 }, autoBindEvent(){ //事件绑定函数 } }   eventBus  eventBus主要有on trigger off方法
-        </div>
-          <a href="https://gy-coder.xyz/posts/mvc/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/mvc/" class="link black dim">
+              MVC
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="link black dim">
@@ -227,12 +242,6 @@ const m = { data : { n = parseInt(localStorage.getItem('x')) || 100 }, create(){
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="link black dim">
               异步与回调
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="link black dim">
-              Ajax简介
             </a>
           </h2>
         
