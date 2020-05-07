@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
+<meta property="og:updated_time" content="2020-05-04T22:30:29+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,28 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/" class="link black dim">
+        Vue数据响应式
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      一个小例子 例子
+预备知识  getter和setter
+let obj = { name:'Trump', position:'president', get imformation(){ return this.position + this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,'n',{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,'n',{ value:0 })  n不能小于0
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -306,23 +328,6 @@ $('div').next('p'); //选择div元素后面的第一个p元素 $('div').parent()
 $('#test').find('.class').addClass('red').end()  分解开来就是这样
 $('#test'). //找到id为test的元素 .find('.class') //选择test底下类名为class的元素 .addclass('red') //为它添加一个名为red的类 .end() //返回到id为test的那个元素  这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
 元素的取值和赋值 操作网页元素，最常见的需求是取得它们的值，或者对它们进行赋值。
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
-        JQuery设计模式
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      jQuery简介 jQuery是目前使用最广泛的javascript函数库。
-据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
-jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返回这些元素，而是返回一个对象 这个对象称作为jQuery对象，jQuery对象可以操作相应的元素  jQuery部分实现 window.$ = window.jQuery = function(selectorOrArrayOrTemplate){ let elements //element是个DOM数组 if(typeof selectorOrArrayOrTemplate === 'string'){ if(selectorOrArrayOrTemplate[0] === '&lt;'){ // 如果参数是标签字符串就创建DOM对象 elements = [createElement(selectorOrArrayOrTemplate)] }else{ // 如果是选择器就查询 elements = document.querySelectorAll(selectorOrArrayOrTemplate) } }else if(selectorOrArrayOrTemplate instanceof Array){ elements = selectorOrArrayOrTemplate } function createElement(string){ let container = document.createElement('template') container.innerHTML = string.trim() return container.content.firstChild } // 以上是初始化elements的内容 const api = Object.create(jQuery.prototype) Object.assign(api,{ elements:elements, oldApi:selectorOrArrayOrTemplate }) // 创建jQuery对象 return api } $.
     </div>
   </div>
 </div>

@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
+<meta property="og:updated_time" content="2020-05-04T22:30:29+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,23 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/jquery%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="link black dim">
+        JQuery设计模式
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      jQuery简介 jQuery是目前使用最广泛的javascript函数库。
+据统计，全世界排名前100万的网站，有46%使用jQuery，远远超过其他库。微软公司甚至把jQuery作为他们的官方库。
+jQuery的设计思路  jQuery(选择器)用于获取相应的元素 但它不返回这些元素，而是返回一个对象 这个对象称作为jQuery对象，jQuery对象可以操作相应的元素  jQuery部分实现 window.$ = window.jQuery = function(selectorOrArrayOrTemplate){ let elements //element是个DOM数组 if(typeof selectorOrArrayOrTemplate === 'string'){ if(selectorOrArrayOrTemplate[0] === '&lt;'){ // 如果参数是标签字符串就创建DOM对象 elements = [createElement(selectorOrArrayOrTemplate)] }else{ // 如果是选择器就查询 elements = document.querySelectorAll(selectorOrArrayOrTemplate) } }else if(selectorOrArrayOrTemplate instanceof Array){ elements = selectorOrArrayOrTemplate } function createElement(string){ let container = document.createElement('template') container.innerHTML = string.trim() return container.content.firstChild } // 以上是初始化elements的内容 const api = Object.create(jQuery.prototype) Object.assign(api,{ elements:elements, oldApi:selectorOrArrayOrTemplate }) // 创建jQuery对象 return api } $.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -296,32 +313,6 @@ url一般由协议 + 域名 + 路径 + 查询参数 + 锚点组成
  例子:
 在http://www.baidu.com/s?wd=hello&amp;rsv_spt=1#5中
  https代表协议 www.baidu.com代表域名 s?代表路径 wd=hello&amp;rsv_spt=1代表查询参数 #5代表锚点   
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/css%E5%8A%A8%E7%94%BB%E5%8F%8A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/" class="link black dim">
-        CSS动画及浏览器渲染原理
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      浏览器的渲染原理  浏览器的渲染过程：
- 根据 HTML 建立 HTML 树(DOM) 根据 CSS 建立 CSS 树(CSSOM) 将两课树合并成一颗渲染树 Layout 布局(文档流，盒模型，计算大小和位置) paint 绘制(把边框颜色，文字颜色，阴影等画出来) compose 合成(根据层叠关系展示画面)
-  三种更新方式:
- JavaScript &ndash;&gt; Style &ndash;&gt; Layout &ndash;&gt; Paint &ndash;&gt; composite
-例:div.remove()会使当前元素消失，其他元素 relayout
- JavaScript &ndash;&gt; Style &ndash;&gt; Paint &ndash;&gt; composite
-例:改变 background，直接 repaint + composite
- JavaScript &ndash;&gt; Style &ndash;&gt; composite
-例:改变 transform，只需 composite
-   CSS 动画优化 CSS 动画优化的方式有很多，本文主要讲解两个方面，如果您想了解完全可以参考该链接
- Js 优化:
-使用 requestAnimationFrame 代替 SetInterVal 和 setTimeOut
     </div>
   </div>
 </div>

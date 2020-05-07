@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-05-01T12:35:38+08:00" />
+<meta property="og:updated_time" content="2020-05-04T22:30:29+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,37 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/" class="color-inherit dim link">
+            Vue数据响应式
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          一个小例子 例子
+预备知识  getter和setter
+let obj = { name:'Trump', position:'president', get imformation(){ return this.position + this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,'n',{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,'n',{ value:0 })  n不能小于0
+        </div>
+          <a href="https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="color-inherit dim link">
             Vue基本属性
             </a>
@@ -181,45 +212,18 @@ vue create vue-demo  在vue项目创建之后，系统会要求用户配置项�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="color-inherit dim link">
-            Webpack入门
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          什么是webpack？  本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。  开始使用webpack webpack的安装分全局安装和本地安装
- 本地安装
-mkdir webpack-demo cd webpack-demo npm init -y npm install webpack webpack-cli --save-dev  全局安装
-npm install --global webpack   配置configuration  先在package.json中的script内加入以下代码
- &quot;build&quot;: &quot;rm -rf dist &amp;&amp; webpack&quot;,  用途:每次都可以通过yarn build来打包
-但是运行webpack时会出现如下警告
- 创建一个webpack.config.js
-然后在webpack.config.js内写入以下代码
-const path = require('path'); module.exports = { mode: &quot;production&quot;, }  其中mode内可以填入 &ldquo;production&rdquo; 或 &ldquo;development&rdquo;
- production是以生产模式打包，所生成的js代码无注释
-        </div>
-          <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/webpack%E5%85%A5%E9%97%A8/" class="link black dim">
+              Webpack入门
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/mvc/" class="link black dim">
@@ -236,12 +240,6 @@ const path = require('path'); module.exports = { mode: &quot;production&quot;, }
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/promise/" class="link black dim">
               Promise
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%9B%9E%E8%B0%83/" class="link black dim">
-              异步与回调
             </a>
           </h2>
         

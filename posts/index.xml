@@ -6,10 +6,26 @@
     <description>Recent content in Posts on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Fri, 01 May 2020 12:35:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 22:30:29 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue数据响应式</title>
+      <link>https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</link>
+      <pubDate>Mon, 04 May 2020 22:30:29 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/</guid>
+      <description>一个小例子 例子
+预备知识  getter和setter
+let obj = { name:&#39;Trump&#39;, position:&#39;president&#39;, get imformation(){ return this.position + this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,&#39;n&#39;,{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,&#39;n&#39;,{ value:0 })  n不能小于0</description>
+    </item>
     
     <item>
       <title>Vue基本属性</title>

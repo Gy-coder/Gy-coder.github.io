@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Vue数据响应式</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Vue数据响应式" />
+<meta property="og:description" content="一个小例子 例子
+预备知识  getter和setter
+let obj = { name:&#39;Trump&#39;, position:&#39;president&#39;, get imformation(){ return this.position &#43; this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,&#39;n&#39;,{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,&#39;n&#39;,{ value:0 })  n不能小于0" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/" />
+<meta property="article:published_time" content="2020-05-04T22:30:29+08:00" />
+<meta property="article:modified_time" content="2020-05-04T22:30:29+08:00" />
+<meta itemprop="name" content="Vue数据响应式">
+<meta itemprop="description" content="一个小例子 例子
+预备知识  getter和setter
+let obj = { name:&#39;Trump&#39;, position:&#39;president&#39;, get imformation(){ return this.position &#43; this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,&#39;n&#39;,{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,&#39;n&#39;,{ value:0 })  n不能小于0">
+
+
+<meta itemprop="datePublished" content="2020-05-04T22:30:29&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-04T22:30:29&#43;08:00" />
+<meta itemprop="wordCount" content="279">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue数据响应式"/>
+<meta name="twitter:description" content="一个小例子 例子
+预备知识  getter和setter
+let obj = { name:&#39;Trump&#39;, position:&#39;president&#39;, get imformation(){ return this.position &#43; this.name }, set(newPresident){ obj.name = newPresident } }  getter和setter教程
+实例
+ Object.defineProperty
+let o = {} let x = 1 Object.defineProperty(o,&#39;n&#39;,{ get(){ return x }, set(value){ x = value } })   一个实验  给对象添加一个属性
+let data = { n:0 }  使用defineProperty添加属性
+let data = {} Object.defineProperty(data,&#39;n&#39;,{ value:0 })  n不能小于0"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Vue数据响应式</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-04T22:30:29&#43;08:00">May 4, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="一个小例子">一个小例子</h1>
+
+<p><a href="http://js.jirengu.com/puruwepujo/1/edit?html,js,output">例子</a></p>
+
+<h1 id="预备知识">预备知识</h1>
+
+<ol>
+<li><p>getter和setter</p>
+
+<pre><code class="language-javascript">let obj = {
+  name:'Trump',
+  position:'president',
+  get imformation(){
+     return this.position + this.name
+  },
+  set(newPresident){
+     obj.name = newPresident
+  }
+} 
+</code></pre>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#ECMAScript_6%E6%96%B0%E6%A0%87%E8%AE%B0">getter和setter教程</a></p>
+
+<p><a href="http://js.jirengu.com/jetukadami/1/edit">实例</a></p></li>
+
+<li><p>Object.defineProperty</p>
+
+<pre><code class="language-javascript">let o = {}
+let x = 1
+Object.defineProperty(o,'n',{
+  get(){
+    return x
+  },
+  set(value){
+    x = value
+  }
+})
+</code></pre></li>
+</ol>
+
+<h1 id="一个实验">一个实验</h1>
+
+<ol>
+<li><p>给对象添加一个属性</p>
+
+<pre><code class="language-JavaScript">let data = {
+   n:0
+}
+</code></pre></li>
+
+<li><p>使用defineProperty添加属性</p>
+
+<pre><code class="language-JavaScript">let data = {}
+Object.defineProperty(data,'n',{
+   value:0
+})
+</code></pre></li>
+
+<li><p>n不能小于0</p>
+
+<pre><code class="language-JavaScript">let data = {}
+let x = 0
+Object.defineProperty(data,'n',{
+  get(){
+    return x 
+  },
+  set(value){
+    if(value &lt; 0) return 
+    set(value){
+       x = value
+    } 
+  }
+})
+
+console.log(data.n)
+data.n = -1
+console.log(data2.n)   // 改不了值
+data.n = 1
+console.log(data2.n)   //可以改值  
+</code></pre></li>
+
+<li><p>使用代理</p>
+
+<pre><code class="language-JavaScript">let data = Proxy({data:{n:0}})
+function Proxy({data}){
+   const obj = {}
+   Object.defineProperty(obj,'n',{
+      get(){
+        return data.n
+      },
+      set(value){
+        if(value &lt; 0){
+            data.n = value
+        }
+      }
+    })
+    return obj
+}
+//obj就是代理
+</code></pre></li>
+
+<li><p>代理的bug</p>
+
+<pre><code class="language-JavaScript">let myData = {n:0}
+let data = Proxy({data:myData})
+
+console.log(data.n)
+myData.n = -1
+console.log(data.n) // data.n会被改变
+</code></pre></li>
+
+<li><p>添加监听(这就是代理模式)</p>
+
+<pre><code class="language-JavaScript">let myData = {n:0}
+let data = Proxy({data:myData})
+function Proxy({data}){
+ let x = data.n
+ let obj = {}
+ Object.defineProperty(data,'n',{
+    get(){
+       return x
+    },
+    set(value){
+        if(value &lt; 0) return
+        x = value
+    }  
+ })
+ Object.defineProperty(obj, 'n', {
+     get(){
+       return data.n
+     },
+     set(value){
+       if(value&lt;0)return  //这句话是多余的
+       data.n = value
+     }
+ })  
+ return obj // obj 就是代理
+}
+
+console.log(${data.n})
+myData.n = -1
+console.log(`${data.n}，设置为 -1 失败了`)
+myData.n = 1
+console.log(`${data.n}，设置为 1 成功了`)
+</code></pre></li>
+</ol>
+
+<h1 id="代理模式">代理模式</h1>
+
+<ol>
+<li>对myData属性的读写 全权由另一个对象负责(data)</li>
+<li>那么data就是myData的代理</li>
+</ol>
+
+<h1 id="vue中的代理模式">Vue中的代理模式</h1>
+
+<pre><code class="language-JavaScript">const vm = new Vue({data:{myData}})
+</code></pre>
+
+<ol>
+<li>vm就是data的代理</li>
+<li>vm会对myData的属性进行监控</li>
+</ol>
+
+<p>为什么要监控？防止myData的属性改变而vm不知道
+vm知道了就可以调用从而改变视图</p>
+
+<p><img src="../../images/39.png" alt="" /></p>
+
+<h1 id="vue的数据响应式">Vue的数据响应式</h1>
+
+<h3 id="什么是响应式">什么是响应式？</h3>
+
+<p>一个物体能对外界刺激做出反应 他就是响应式</p>
+
+<h3 id="vue的数据响应式-1">Vue的数据响应式</h3>
+
+<pre><code class="language-JavaScript">const vm = new Vue({data:{n:0}})
+</code></pre>
+
+<ol>
+<li>修改vm中的n 视图就会有响应</li>
+<li>Vue2是通过Object.defineProperty实现数据响应式</li>
+</ol>
+
+<p><img src="../../images/38.png" alt="" /></p>
+
+<h1 id="数据响应式中的bug">数据响应式中的bug</h1>
+
+<h3 id="bug">bug</h3>
+
+<p>使用Object.defineProperty的要求是n存在，如果n不存在就不会监听</p>
+
+<p><a href="http://js.jirengu.com/nivotakasi/2/edit">一个例子</a></p>
+
+<p>在这个例子中，点击按钮不会显示b</p>
+
+<p>因为Vue无法监听一开始就不存在的b</p>
+
+<h3 id="解决bug">解决bug</h3>
+
+<ol>
+<li><p>在Vue中声明所有的属性</p>
+
+<p><a href="http://js.jirengu.com/vawehikega/1/edit?html,js,output">1方法</a></p></li>
+
+<li><p>使用set</p>
+
+<p><a href="http://js.jirengu.com/sexemozava/1/edit?html,js,output">2方法</a></p>
+
+<p>Vue.set的作用</p>
+
+<ol>
+<li>新增key</li>
+<li>自动创建代理和监听</li>
+<li>更新UI
+<br />
+<br /></li>
+</ol></li>
+</ol>
+
+<h1 id="数组中的响应式">数组中的响应式</h1>
+
+<p><a href="http://js.jirengu.com/mewiduhigi/1/edit">例子</a></p>
+
+<p>Vue中篡改了数组的7个API 具体的内容详见<a href="https://cn.vuejs.org/v2/guide/list.html#%E5%8F%98%E5%BC%82%E6%96%B9%E6%B3%95-mutation-method">变异方法</a></p>
+
+<p>篡改思路</p>
+
+<pre><code class="language-JavaScript">  class VueArray extends Array{
+    push(...args){
+       const OldLength = this.length   //当前数组长度
+       super.push(...args)
+       for(let i=OldLength;i&lt;this.length;i++){
+           Vue.set(this,i,this[i])
+       //    在当前数组中设置一个为i的属性，属性值是this[i]
+       }
+    } 
+  }
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
