@@ -6,10 +6,27 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Mon, 04 May 2020 22:30:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 16:53:48 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue中computed和watch的区别</title>
+      <link>https://gy-coder.xyz/posts/vue%E4%B8%ADcomputed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Wed, 13 May 2020 16:53:48 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/vue%E4%B8%ADcomputed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>什么是Computed？ Computed就是计算属性
+用法:
+const Vue = window.Vue let obj = {n:0} new Vue({ data(){ return { n:obj.n } }, computed:{ stringZero(){ let hash = {0:&#39;零&#39;} return hash[obj.n] } }, template:`&amp;lt;div&amp;gt;{{n}} &amp;lt;div&amp;gt;{{stringZero}}&amp;lt;/div &amp;lt;/div&amp;gt;` }).$mount(&#39;#app&#39;)  实例1
+实例2
+什么是Watch？ Watch就是侦听器，其作用就是侦听属性的变化
+语法
+ 语法1
+const Vue = window.Vue new Vue({ data(){return {n:0}}, template:` &amp;lt;div&amp;gt; {{n}} &amp;lt;button @click=&amp;quot;add&amp;quot;&amp;gt;+1&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt;`, methods:{ add(){ this.n+=1 } }, watch:{ &#39;n&#39;(){ console.log(&#39;n變了&#39;) } } }).$mount(&#39;#app&#39;)  語法2
+const Vue = window.</description>
+    </item>
     
     <item>
       <title>Vue数据响应式</title>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Vue中computed和watch的区别</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Vue中computed和watch的区别" />
+<meta property="og:description" content="什么是Computed？ Computed就是计算属性
+用法:
+const Vue = window.Vue let obj = {n:0} new Vue({ data(){ return { n:obj.n } }, computed:{ stringZero(){ let hash = {0:&#39;零&#39;} return hash[obj.n] } }, template:`&lt;div&gt;{{n}} &lt;div&gt;{{stringZero}}&lt;/div &lt;/div&gt;` }).$mount(&#39;#app&#39;)  实例1
+实例2
+什么是Watch？ Watch就是侦听器，其作用就是侦听属性的变化
+语法
+ 语法1
+const Vue = window.Vue new Vue({ data(){return {n:0}}, template:` &lt;div&gt; {{n}} &lt;button @click=&quot;add&quot;&gt;&#43;1&lt;/button&gt; &lt;/div&gt;`, methods:{ add(){ this.n&#43;=1 } }, watch:{ &#39;n&#39;(){ console.log(&#39;n變了&#39;) } } }).$mount(&#39;#app&#39;)  語法2
+const Vue = window." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/vue%E4%B8%ADcomputed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/" />
+<meta property="article:published_time" content="2020-05-13T16:53:48+08:00" />
+<meta property="article:modified_time" content="2020-05-13T16:53:48+08:00" />
+<meta itemprop="name" content="Vue中computed和watch的区别">
+<meta itemprop="description" content="什么是Computed？ Computed就是计算属性
+用法:
+const Vue = window.Vue let obj = {n:0} new Vue({ data(){ return { n:obj.n } }, computed:{ stringZero(){ let hash = {0:&#39;零&#39;} return hash[obj.n] } }, template:`&lt;div&gt;{{n}} &lt;div&gt;{{stringZero}}&lt;/div &lt;/div&gt;` }).$mount(&#39;#app&#39;)  实例1
+实例2
+什么是Watch？ Watch就是侦听器，其作用就是侦听属性的变化
+语法
+ 语法1
+const Vue = window.Vue new Vue({ data(){return {n:0}}, template:` &lt;div&gt; {{n}} &lt;button @click=&quot;add&quot;&gt;&#43;1&lt;/button&gt; &lt;/div&gt;`, methods:{ add(){ this.n&#43;=1 } }, watch:{ &#39;n&#39;(){ console.log(&#39;n變了&#39;) } } }).$mount(&#39;#app&#39;)  語法2
+const Vue = window.">
+
+
+<meta itemprop="datePublished" content="2020-05-13T16:53:48&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T16:53:48&#43;08:00" />
+<meta itemprop="wordCount" content="197">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue中computed和watch的区别"/>
+<meta name="twitter:description" content="什么是Computed？ Computed就是计算属性
+用法:
+const Vue = window.Vue let obj = {n:0} new Vue({ data(){ return { n:obj.n } }, computed:{ stringZero(){ let hash = {0:&#39;零&#39;} return hash[obj.n] } }, template:`&lt;div&gt;{{n}} &lt;div&gt;{{stringZero}}&lt;/div &lt;/div&gt;` }).$mount(&#39;#app&#39;)  实例1
+实例2
+什么是Watch？ Watch就是侦听器，其作用就是侦听属性的变化
+语法
+ 语法1
+const Vue = window.Vue new Vue({ data(){return {n:0}}, template:` &lt;div&gt; {{n}} &lt;button @click=&quot;add&quot;&gt;&#43;1&lt;/button&gt; &lt;/div&gt;`, methods:{ add(){ this.n&#43;=1 } }, watch:{ &#39;n&#39;(){ console.log(&#39;n變了&#39;) } } }).$mount(&#39;#app&#39;)  語法2
+const Vue = window."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Vue中computed和watch的区别</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-13T16:53:48&#43;08:00">May 13, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="什么是computed">什么是Computed？</h1>
+
+<p>Computed就是计算属性</p>
+
+<p>用法:</p>
+
+<pre><code class="language-vue">const Vue = window.Vue
+let obj = {n:0}
+new Vue({
+  data(){
+    return {
+      n:obj.n
+    }
+  },
+  computed:{
+    stringZero(){
+      let hash = {0:'零'}
+      return hash[obj.n]
+    }
+  },
+  template:`&lt;div&gt;{{n}}
+      &lt;div&gt;{{stringZero}}&lt;/div
+&lt;/div&gt;`
+}).$mount('#app')
+</code></pre>
+
+<p><a href="http://js.jirengu.com/futiwohuqi/1/edit">实例1</a></p>
+
+<p><a href="https://codesandbox.io/s/bold-matsumoto-efn0i?file=/src/main.js">实例2</a></p>
+
+<h1 id="什么是watch">什么是Watch？</h1>
+
+<p>Watch就是侦听器，其作用就是侦听属性的变化</p>
+
+<p>语法</p>
+
+<ol>
+<li><p>语法1</p>
+
+<pre><code class="language-vue">const Vue = window.Vue
+    
+new Vue({
+  data(){return {n:0}},
+  template:`
+    &lt;div&gt;
+        {{n}}
+        &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;        
+    &lt;/div&gt;`,
+  methods:{
+    add(){
+      this.n+=1
+    }
+  },
+  watch:{
+    'n'(){
+      console.log('n變了')
+    }
+  }
+}).$mount('#app')
+</code></pre></li>
+
+<li><p>語法2</p>
+
+<pre><code class="language-vue">const Vue = window.Vue
+    
+    
+new Vue({
+  data(){return {n:0}},
+  template:`
+    &lt;div&gt;
+        {{n}}
+        &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;        
+    &lt;/div&gt;`,
+  methods:{
+    add(){
+      this.n+=1
+    },
+   appear(){
+      console.log('n 變了')
+   }
+  },
+  watch:{
+    'n': 'appear'
+  }
+}).$mount('#app')
+</code></pre></li>
+
+<li><p>语法3</p>
+
+<pre><code class="language-vue">const Vue = window.Vue
+new Vue({
+  data(){
+    return {n:0}
+  },
+  template:`&lt;div&gt;
+    {{n}}
+    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;`,
+  methods:{
+    add(){this.n += 1}
+  },
+  watch:{
+    'n':[function(){
+      console.log('n变了')
+    },
+        function(){
+          console.log('great')
+        }]
+  }
+}).$mount('#app')
+</code></pre></li>
+
+<li><p>语法4</p>
+
+<pre><code class="language-vue">new Vue({
+  template:`&lt;div&gt;
+      {{n}}
+    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
+    &lt;/div&gt;`,
+  data:{'n':0},
+  methods:{
+    add(){
+      this.n += 1;
+    },
+  },
+  watch:{
+    'n':{
+      handler(){
+        console.log(1)
+      }
+    }
+  }
+}).$mount('#app')
+</code></pre></li>
+
+<li><p>immediate</p>
+
+<p>immediate属性的功能是在内容被创建时就监听一次(值为true时)，属性的值为true或false</p>
+
+<pre><code class="language-vue">new Vue({
+  template:`&lt;div&gt;
+      {{n}}
+    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
+    &lt;/div&gt;`,
+  data:{'n':0},
+  methods:{
+    add(){
+      this.n += 1;
+    },
+    show(){
+      console.log(2)
+    }
+  },
+  watch:{
+    'n':{
+      handler:&quot;show&quot;,
+      immediate:true
+    }
+  }
+}).$mount('#app')        
+</code></pre>
+
+<p><a href="http://js.jirengu.com/berajiweta/1/edit?html,js,output">实例</a></p>
+
+<p>在实例中 n刚被创建出来 2即刻打印</p></li>
+
+<li><p>deep属性</p>
+
+<p>deep属性的值为true或false，该回调会在任何被侦听的对象的property改变时被调用，不论其被嵌套多深</p>
+
+<p><a href="http://js.jirengu.com/somifoteva/1/edit">实例1</a></p>
+
+<p>在实例1中没有加deep属性，默认deep属性是false，所以+1操作虽然可以实现，但watch内的handler却不会出发，因为watch并没有认为a对象改变(a在内存中的地址没有变，所以对象没有变)</p>
+
+<p><a href="http://js.jirengu.com/wihobucici/1/edit?html,js,output">实例2</a></p>
+
+<p>在实例2中，deep属性为true，当a中的b改变时，会认为a改变了，从而打印出1</p></li>
+</ol>
+
+<h1 id="watch的异步执行">watch的异步执行</h1>
+
+<p><a href="http://js.jirengu.com/xisewepaja/1/edit?html,js,output">实例</a></p>
+
+<p>在这个实例中 撤销操作会出现bug，因为当n改变时，会调用watch.n，由于watch.n是异步调用，所以 this.inUndoMode = false会先与watch.n执行，因此会出现bug</p>
+
+<p><a href="http://js.jirengu.com/sayifavuvo/1/edit?html,js,output">bug的解决</a></p>
+
+<p>使用this.$nextTick之后，会让watch.n异步代码先执行，执行完毕后再执行this.$nextTick中的代码</p>
+
+<h1 id="computed和watch的区别">computed和watch的区别</h1>
+
+<ol>
+<li><p>computed就是计算属性的意思，watch是侦听的意思</p></li>
+
+<li><p>computed是用来计算出一个值的，使用时不需要加括号，并且会根据依赖缓存</p></li>
+
+<li><p>watch会在某个属性变化时，执行一个函数</p></li>
+</ol>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
