@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Gy的个人网站  | Vue指令</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Vue指令" />
+<meta property="og:description" content="Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n&#43;1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n&#43;1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&lt;strong&gt;hi&lt;/strong&gt;  在template的div中写入
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&lt;div v-pre&gt;{{n}}&lt;/div&gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  v-指令名:参数=&ldquo;值&rdquo;
+&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&lt;img v-bind:src=&quot;&#39;x.png&#39;&quot; /&gt;  实例" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/" />
+<meta property="article:published_time" content="2020-05-20T16:48:47+08:00" />
+<meta property="article:modified_time" content="2020-05-20T16:48:47+08:00" />
+<meta itemprop="name" content="Vue指令">
+<meta itemprop="description" content="Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n&#43;1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n&#43;1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&lt;strong&gt;hi&lt;/strong&gt;  在template的div中写入
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&lt;div v-pre&gt;{{n}}&lt;/div&gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  v-指令名:参数=&ldquo;值&rdquo;
+&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&lt;img v-bind:src=&quot;&#39;x.png&#39;&quot; /&gt;  实例">
+
+
+<meta itemprop="datePublished" content="2020-05-20T16:48:47&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-20T16:48:47&#43;08:00" />
+<meta itemprop="wordCount" content="196">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue指令"/>
+<meta name="twitter:description" content="Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n&#43;1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n&#43;1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&lt;strong&gt;hi&lt;/strong&gt;  在template的div中写入
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&lt;div v-pre&gt;{{n}}&lt;/div&gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  v-指令名:参数=&ldquo;值&rdquo;
+&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&lt;img v-bind:src=&quot;&#39;x.png&#39;&quot; /&gt;  实例"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gy-coder.xyz/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Gy的个人网站
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Vue指令</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-20T16:48:47&#43;08:00">May 20, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="vue展示内容">Vue展示内容</h1>
+
+<ol>
+<li><p>表达式</p>
+
+<p>表达式内可以写表达式 如 {{n}}</p>
+
+<p>也可以写任何运算 如 {{n+1}}</p>
+
+<p>也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}</p>
+
+<pre><code class="language-JavaScript">{{obj.a}}
+{{n+1}}
+{{fn(3,1)}}
+</code></pre>
+
+<p><a href="http://js.jirengu.com/padupovuqu/1/edit?html,js,output">实例</a></p></li>
+
+<li><p>HTML内容</p>
+
+<p>假设data.x的内容为</p>
+
+<pre><code class="language-HTML">&lt;strong&gt;hi&lt;/strong&gt;
+</code></pre>
+
+<p>在template的div中写入</p>
+
+<pre><code class="language-HTML">&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>即可显示出粗体的hi</p>
+
+<p><a href="http://js.jirengu.com/radedalobi/1/edit?html,js,output">实例</a></p></li>
+
+<li><p>只显示{{n}}</p>
+
+<p>只需要在{{n}}的标签写入v-pre即可</p>
+
+<pre><code class="language-html"> &lt;div v-pre&gt;{{n}}&lt;/div&gt;
+</code></pre>
+
+<p><a href="http://js.jirengu.com/calasivizo/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h1 id="什么是指令">什么是指令？</h1>
+
+<ul>
+<li>以 v- 为开头的东西就是指令</li>
+
+<li><p>指令的语法</p>
+
+<pre><code class="language-vue">&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>v-指令名:参数=&ldquo;值&rdquo;</p>
+
+<pre><code class="language-vue">&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;
+</code></pre></li>
+
+<li><p>关于指令</p>
+
+<ol>
+<li><p>如果指令中没有特殊字符，可以不加引号</p></li>
+
+<li><p>有些指令没有参数和值，比如v-pre</p></li>
+
+<li><p>有些指令没有值，比如v-on:lick.prevent</p></li>
+</ol></li>
+</ul>
+
+<h2 id="绑定属性">绑定属性</h2>
+
+<ol>
+<li><p>v-bind绑定属性</p>
+
+<pre><code class="language-Vue">&lt;img v-bind:src=&quot;'x.png'&quot; /&gt;
+</code></pre>
+
+<p><a href="http://js.jirengu.com/qijobogave/1/edit?html,js,output">实例</a></p></li>
+
+<li><p>简写</p>
+
+<pre><code class="language-vue">&lt;img :src=&quot;'x.png'&quot;/&gt;
+</code></pre>
+
+<p><a href="http://js.jirengu.com/jehicatoya/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h2 id="绑定对象">绑定对象</h2>
+
+<ol>
+<li><p>加CSS</p>
+
+<pre><code class="language-vue">&lt;div
+:style=&quot;{border: '1px solid red'}&quot;&gt;123&lt;/div&gt;
+</code></pre>
+
+<p><a href="http://js.jirengu.com/soriceceta/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h2 id="绑定事件">绑定事件</h2>
+
+<ol>
+<li><p>v-on绑定事件</p>
+
+<pre><code class="language-vue">&lt;button v-on:click=&quot;n+=1&quot;&gt;+1&lt;/button&gt;
+</code></pre></li>
+
+<li><p>简写</p>
+
+<pre><code class="language-vue">&lt;button @click=&quot;add&quot;&gt;+3&lt;/button&gt;
+</code></pre>
+
+<p><a href="http://js.jirengu.com/fidisomeva/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h2 id="条件判断">条件判断</h2>
+
+<ol>
+<li><p>当v-if的属性值为true时，该div显示</p>
+
+<pre><code class="language-vue"> &lt;div v-if=&quot;bool&quot;&gt;yes&lt;/div&gt;
+ &lt;div v-else&gt;no&lt;/div&gt; 
+
+ data(){
+    return {bool:true}
+ }
+</code></pre>
+
+<p><a href="http://js.jirengu.com/welicopupe/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h2 id="循环">循环</h2>
+
+<ol>
+<li><p>for (value,key) in obj or array</p>
+
+<pre><code class="language-vue">&lt;!-- template内写入   --&gt;
+&lt;ul&gt;
+  &lt;li v-for=&quot;u in users&quot; :key=&quot;users.id&quot;&gt;{{u.name}}&lt;/li&gt;
+  &lt;div&gt;{{users}}&lt;/div&gt;
+&lt;/ul&gt;
+data(){
+ return {
+    users:[
+        {id:1,name:'ling'},
+        {id:2,name:'tang'},
+        {id:3,name:'lv'}
+    ]
+}
+</code></pre></li>
+</ol>
+
+<h2 id="显示-隐藏">显示，隐藏</h2>
+
+<ol>
+<li><p>v-show</p>
+
+<pre><code class="language-Vue">&lt;div v-show=&quot;b%2===1&quot;&gt;{{b}}&lt;/div&gt;`
+</code></pre>
+
+<p><a href="http://js.jirengu.com/moyabaseli/1/edit?html,js,output">实例</a></p></li>
+</ol>
+
+<h1 id="主要的三个指令修饰符">主要的三个指令修饰符</h1>
+
+<ol>
+<li><p>阻止事件冒泡</p>
+
+<pre><code class="language-vue">@click.stop=&quot;add&quot;
+</code></pre></li>
+
+<li><p>阻止默认动作</p>
+
+<pre><code class="language-vue">@click.prevent=&quot;add&quot;
+</code></pre></li>
+
+<li><p>同时阻止默认动作和事件冒泡</p>
+
+<pre><code class="language-vue">@click.stop.prevent=&quot;add&quot;
+</code></pre></li>
+</ol>
+
+<h1 id="sync修饰符">.sync修饰符</h1>
+
+<p>Vue规则：</p>
+
+<ol>
+<li><p>组件不能修改props外部数据</p></li>
+
+<li><p>$emit可以触发事件并传参</p></li>
+
+<li><p>$event可以获取$emit的参数</p></li>
+</ol>
+
+<p>为了能够让组件修改props外部数据，我们有如下例子</p>
+
+<p>在App.vue中</p>
+
+<pre><code class="language-vue">    &lt;template&gt;
+      &lt;div class=&quot;app&quot;&gt;
+        app.vue 有{{total}}
+        &lt;hr&gt;
+         &lt;Child :money=&quot;total&quot; v-on:update:money=&quot;total=$event&quot;/&gt; 
+      &lt;/div&gt;
+    &lt;/template&gt;
+    
+    &lt;script&gt;
+        import Child from &quot;./Child.vue&quot;;
+        export default {
+           data(){
+             return {
+             total:10000
+           }
+        },
+        components:{Child}
+       }
+    &lt;/script&gt;
+    
+    &lt;style&gt;
+      .app{
+        border:1px solid red;
+        height: 100px;
+      }
+    &lt;/style&gt;
+</code></pre>
+
+<p>在Child.vue中</p>
+
+<pre><code class="language-vue">    &lt;template&gt;
+      &lt;div class=&quot;child&quot;&gt;
+        {{money}}
+        &lt;button @click=&quot;$emit('update:money',money-100)&quot;&gt;借钱&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+    
+    
+    &lt;script&gt;
+    export default {
+      props: [&quot;money&quot;]
+    };
+    &lt;/script&gt;
+    
+    
+    &lt;style&gt;
+    .child{
+      border:1px solid blue;
+    }
+    &lt;/style&gt;
+</code></pre>
+
+<p>在这个例子当中 ，Child组件可以修改App组件的数据，从而达到目标，为了使得Child标签更加简洁，可以简写为</p>
+
+<pre><code class="language-vue">   &lt;Child :money.sync=&quot;total&quot; /&gt;
+</code></pre>
+
+<p>.sync 修饰符只是作为一个编译时的语法糖存在。它会被扩展为一个自动更新父组件属性的 v-on 监听器</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gy-coder.xyz/" >
+    &copy; 2020 Gy的个人网站
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -6,10 +6,39 @@
     <description>Recent content on Gy的个人网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Hans</language>
-    <lastBuildDate>Wed, 13 May 2020 16:53:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 16:48:47 +0800</lastBuildDate>
     
 	<atom:link href="https://gy-coder.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue指令</title>
+      <link>https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/</link>
+      <pubDate>Wed, 20 May 2020 16:48:47 +0800</pubDate>
+      
+      <guid>https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/</guid>
+      <description>Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n+1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n+1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&amp;lt;strong&amp;gt;hi&amp;lt;/strong&amp;gt;  在template的div中写入
+&amp;lt;div v-html=&amp;quot;x&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&amp;lt;div v-pre&amp;gt;{{n}}&amp;lt;/div&amp;gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&amp;lt;div v-html=&amp;quot;x&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  v-指令名:参数=&amp;ldquo;值&amp;rdquo;
+&amp;lt;div v-on:click=&amp;quot;add&amp;quot;&amp;gt;123&amp;lt;/div&amp;gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&amp;lt;img v-bind:src=&amp;quot;&#39;x.png&#39;&amp;quot; /&amp;gt;  实例</description>
+    </item>
     
     <item>
       <title>Vue中computed和watch的区别</title>

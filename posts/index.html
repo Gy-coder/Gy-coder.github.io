@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/posts/" />
 
-<meta property="og:updated_time" content="2020-05-13T16:53:48+08:00" />
+<meta property="og:updated_time" content="2020-05-20T16:48:47+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -91,6 +91,41 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/" class="link black dim">
+        Vue指令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n+1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n+1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&lt;strong&gt;hi&lt;/strong&gt;  在template的div中写入
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&lt;div v-pre&gt;{{n}}&lt;/div&gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  v-指令名:参数=&ldquo;值&rdquo;
+&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&lt;img v-bind:src=&quot;'x.png'&quot; /&gt;  实例
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -302,33 +337,6 @@ function f1(){} function f2(fn){ fn() } f2(f1)  分析:
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="https://gy-coder.xyz/posts/ajax%E7%AE%80%E4%BB%8B/" class="link black dim">
-        Ajax简介
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ajax是什么？ AJAX即“Asynchronous JavaScript and XML”（非同步的JavaScript与XML技术），指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出
-ajax的功能  ajax的功能就是用JavaScript来发送请求和接收响应
- 浏览器在window上加了一个XMLHttpRequest函数
- 用这个函数可以构造出一个对象
- JavaScript可以用这个函数来发送请求和接收响应
-  ajax的用法  创建一个XMLHttpRequest对象
-const request = new XMLHttpRequest()  调用这个对象的open方法
-request.open('GET','/style.css')  监听对象的onreadystatechange事件
-request.onreadystatechange = ()=&gt;{ //具体代码 }  调用对象的send方法
-request.send()   关于open  open方法接收两个参数
- 第一个参数是是请求方式，有GET和POST两种 第二个参数是请求路径   关于onreadystatechange事件  readystate
-XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的状态。一个XHR代理总是处于下列状态中的一个：
-   值 状态 描述     0 unsent 创建XMLHTTPRequest   1 opened open方法调用   2 headers-received send方法已被调用   3 loading 下载中(第一个字符已被下载)   4 done 下载操作完成    status
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 
 <ul class="pagination">
@@ -376,12 +384,23 @@ XMLHttpRequest.readyState属性返回一个XMLHttpRequest代理当前所处的�
     <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
     
     
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/4/">4</a></li>
+    
+    
     <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>

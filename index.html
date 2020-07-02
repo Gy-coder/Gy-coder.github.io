@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gy-coder.xyz/" />
 
-<meta property="og:updated_time" content="2020-05-13T16:53:48+08:00" />
+<meta property="og:updated_time" content="2020-05-20T16:48:47+08:00" />
 <meta itemprop="name" content="Gy的个人网站">
 <meta itemprop="description" content="">
 
@@ -122,6 +122,50 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/" class="color-inherit dim link">
+            Vue指令
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Vue展示内容  表达式
+表达式内可以写表达式 如 {{n}}
+也可以写任何运算 如 {{n+1}}
+也可以调用函数 会返回函数执行的结果 如 {{fn(3,2)}}
+{{obj.a}} {{n+1}} {{fn(3,1)}}  实例
+ HTML内容
+假设data.x的内容为
+&lt;strong&gt;hi&lt;/strong&gt;  在template的div中写入
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  即可显示出粗体的hi
+实例
+ 只显示{{n}}
+只需要在{{n}}的标签写入v-pre即可
+&lt;div v-pre&gt;{{n}}&lt;/div&gt;  实例
+  什么是指令？  以 v- 为开头的东西就是指令 指令的语法
+&lt;div v-html=&quot;x&quot;&gt;&lt;/div&gt;  v-指令名:参数=&ldquo;值&rdquo;
+&lt;div v-on:click=&quot;add&quot;&gt;123&lt;/div&gt;  关于指令
+ 如果指令中没有特殊字符，可以不加引号
+ 有些指令没有参数和值，比如v-pre
+ 有些指令没有值，比如v-on:lick.prevent
+   绑定属性  v-bind绑定属性
+&lt;img v-bind:src=&quot;'x.png'&quot; /&gt;  实例
+        </div>
+          <a href="https://gy-coder.xyz/posts/vue%E6%8C%87%E4%BB%A4/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://gy-coder.xyz/posts/vue%E4%B8%ADcomputed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/" class="color-inherit dim link">
             Vue中computed和watch的区别
             </a>
@@ -177,47 +221,18 @@ let data = {} Object.defineProperty(data,'n',{ value:0 })  n不能小于0
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="color-inherit dim link">
-            Vue基本属性
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Vue的基本属性  el&ndash;挂载点
-可以用$mount代替
- data&ndash;内部数据
-支持对象和函数，但是优先使用函数
- methods&ndash;方法
-事件处理函数或者是普通函数
- components&ndash;组件
-组件有三种写法
- 四个生命周期钩子
- created &ndash;实例出现在内存中调用 mounted &ndash;实例出现在页面中调用 updated &ndash;实例更新时调用 destroyed &ndash;实例在内存中消亡时调用   prop &ndash;外部数据
- message = &ldquo;n&rdquo; &ndash;传入字符串 :message = &ldquo;n&rdquo; &ndash;传入this.n数据 :fn = &ldquo;add&rdquo; &ndash; 传入this.add函数    挂载点用法  挂载点可以用el实现，也可以用$mount实现
-import App from './App.vue' new Vue({ el: &quot;#app&quot;, render: h =&gt; h(App) });  import App from './App.vue' new Vue({ render: h =&gt; h(App) }).
-        </div>
-          <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="https://gy-coder.xyz/posts/vue%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="link black dim">
+              Vue基本属性
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/vue%E5%85%A5%E9%97%A8/" class="link black dim">
@@ -234,12 +249,6 @@ import App from './App.vue' new Vue({ el: &quot;#app&quot;, render: h =&gt; h(Ap
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="https://gy-coder.xyz/posts/mvc/" class="link black dim">
               MVC
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://gy-coder.xyz/posts/%E8%B7%A8%E5%9F%9F/" class="link black dim">
-              跨域
             </a>
           </h2>
         
